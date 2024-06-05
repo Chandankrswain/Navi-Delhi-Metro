@@ -1,7 +1,10 @@
+import TicketCard from "./Components/TicketCard";
+
+
 function App() {
   return (
     <>
-      <h1>Hello World</h1>
+      <TicketCard />
     </>
   );
 }
