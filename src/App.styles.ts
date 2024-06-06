@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+export const TicketMapDiv = styled.div``;
+
 export const BodyText = styled.p`
   color: #e9ecef;
   position: absolute;

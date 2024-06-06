@@ -1,5 +1,5 @@
 import TicketCard from "./Components/TickectCard/TicketCard";
-import { BodyText, NavigateDiv } from "../src/App.styles";
+import { BodyText, NavigateDiv, TicketMapDiv } from "../src/App.styles";
 
 function App() {
   return (
@@ -7,7 +7,9 @@ function App() {
       <NavigateDiv>
         <BodyText>Navigate</BodyText>
       </NavigateDiv>
-      <TicketCard />
+      <TicketMapDiv>
+        <TicketCard />
+      </TicketMapDiv>
     </>
   );
 }
