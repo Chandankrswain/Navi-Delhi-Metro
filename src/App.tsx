@@ -1,10 +1,13 @@
-import TicketCard from "./Components/TicketCard";
-
+import TicketCard from "./Components/TickectCard/TicketCard";
+import { BodyText, NavigateDiv } from "../src/App.styles";
 
 function App() {
   return (
     <>
-      <TicketCard />
+      <NavigateDiv>
+        <BodyText>Navigate</BodyText>
+      </NavigateDiv>
+      {/* <TicketCard /> */}
     </>
   );
 }
