@@ -16,6 +16,8 @@ export const MainContainerDiv = styled.div`
   }
 `;
 
+export const Image = styled.img``;
+
 export const UpperBox = styled.div`
   background-color: #666666;
   border-radius: 30px;

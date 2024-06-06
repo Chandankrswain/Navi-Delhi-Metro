@@ -1,9 +1,12 @@
 import InnerCard from "../Innercard/InnerCard";
+import barcode from "src/img/barcode.svg";
+
 import {
   UpperBox,
   LowerBox,
   MainContainerDiv,
   LowerCircle,
+  Image,
 } from "./TicketCard.styles";
 
 const TicketCard = () => {
@@ -13,7 +16,6 @@ const TicketCard = () => {
         <InnerCard />
       </UpperBox>
       <LowerBox>
-        <img src="" />
         <LowerCircle></LowerCircle>
       </LowerBox>
     </MainContainerDiv>
