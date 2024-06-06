@@ -1,9 +1,7 @@
-import React from 'react'
+import { UpperBox } from "./InnerCard.styles";
 
 const InnerCard = () => {
-  return (
-    <div>InnerCard</div>
-  )
-}
+  return <UpperBox></UpperBox>;
+};
 
-export default InnerCard
+export default InnerCard;

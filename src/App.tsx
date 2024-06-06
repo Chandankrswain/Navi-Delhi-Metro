@@ -7,7 +7,7 @@ function App() {
       <NavigateDiv>
         <BodyText>Navigate</BodyText>
       </NavigateDiv>
-      {/* <TicketCard /> */}
+      <TicketCard />
     </>
   );
 }

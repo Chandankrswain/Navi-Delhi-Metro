@@ -22,5 +22,6 @@ export const NavigateDiv = styled.div`
   justify-content: center;
   height: 30vh;
   width: 100%;
-  position: relative;
+  z-index: -3;
+  position: absolute;
 `;
