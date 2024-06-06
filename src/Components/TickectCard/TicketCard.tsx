@@ -13,6 +13,7 @@ const TicketCard = () => {
         <InnerCard />
       </UpperBox>
       <LowerBox>
+        <img src="" />
         <LowerCircle></LowerCircle>
       </LowerBox>
     </MainContainerDiv>

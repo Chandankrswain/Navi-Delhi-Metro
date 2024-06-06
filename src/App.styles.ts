@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const TicketMapDiv = styled.div``;
+export const TicketMapDiv = styled.div`
+  display: flex;
+  width: 100%;
+  margin: 0px;
+`;
 
 export const BodyText = styled.p`
   color: #e9ecef;
