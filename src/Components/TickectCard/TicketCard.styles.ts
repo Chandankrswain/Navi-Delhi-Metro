@@ -40,5 +40,5 @@ export const LowerCircle = styled.div`\
     height:110px;
     margin-left:150px;
     margin-top:170px;
-    postion:absolute;
+   
 `;
