@@ -1,3 +1,5 @@
+function hello() {}
+
 const banner = () => {
   return <div>banner</div>;
 };
