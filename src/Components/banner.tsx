@@ -1,7 +1,7 @@
 function hello() {}
 
 const banner = () => {
-  return <div>banner</div>;
+  return <div>banners</div>;
 };
 
 export default banner;
