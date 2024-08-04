@@ -1,9 +1,13 @@
-import Navbar from './Components/Navbar';
+import Banner from "./Components/Banner";
+import Navbar from "./Components/Navbar";
 
 const App = () => {
-  return <>
-    <Navbar/>
-  </>
+  return (
+    <>
+      <Navbar />
+      <Banner />
+    </>
+  );
 };
 
 export default App;
