@@ -1,6 +1,7 @@
 import BannerCard from "./BannerCard";
 import scrollTest from "../images/delhi-metro.png";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
+import BannerText from "./BannerText";
 
 const mapContainerStyle = {
   width: "100vw",
@@ -24,14 +25,23 @@ const Banner = () => {
     return <div>Loading maps</div>;
   }
 
+  const defaultMapOptions = {
+    fullscreenControl: false,
+  };
+
   return (
     <>
-      <BannerCard />
+      <div className="flex w-full absolute justify-center justify-evenly items-center h-screen ">
+        <BannerCard />
+        <BannerText />
+      </div>
+
       <div>
         <GoogleMap
           mapContainerStyle={mapContainerStyle}
           zoom={11}
           center={center}
+          options={defaultMapOptions}
         >
           <Marker position={center} />
         </GoogleMap>

@@ -1,7 +1,9 @@
+import { PiArrowsDownUpBold } from "react-icons/pi";
+
 const BannerCard = () => {
   return (
-    <div className="bg-white w-[600px] h-[500px] absolute mt-60 ml-[200px] rounded-xl z-10">
-      <p className="m-4">Enjoy Your journey</p>
+    <div className="bg-white w-[550px] h-[620px] rounded-sm z-10 p-4">
+      <p className="">Enjoy Your journey</p>
     </div>
   );
 };
