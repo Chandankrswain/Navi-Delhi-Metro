@@ -1,11 +1,12 @@
-import BannerCard from "./BannerCard";
-import scrollTest from "../images/delhi-metro.png";
-import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
-import BannerText from "./BannerText";
+import BannerCard from './BannerCard';
+import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
+import BannerText from './BannerText';
+
+const GOOGLE_MAP_KEY = import.meta.env.REACT_APP_GOOGLE_MAP_KEY;
 
 const mapContainerStyle = {
-  width: "100vw",
-  height: "100vh",
+  width: '100vw',
+  height: '100vh',
 };
 const center = {
   lat: 28.6448, // default latitude
@@ -14,7 +15,7 @@ const center = {
 
 const Banner = () => {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyCmerPEpk5lCXZlINyO80Jf3FBtSlGUlQ4",
+    googleMapsApiKey: GOOGLE_MAP_KEY,
   });
 
   if (loadError) {
@@ -29,9 +30,10 @@ const Banner = () => {
     fullscreenControl: false,
   };
 
+  console.log('key', GOOGLE_MAP_KEY);
   return (
     <>
-      <div className="flex w-full absolute justify-center justify-evenly items-center h-screen ">
+      <div className='flex w-full absolute justify-center justify-evenly items-center h-screen '>
         <BannerCard />
         <BannerText />
       </div>
@@ -46,8 +48,6 @@ const Banner = () => {
           <Marker position={center} />
         </GoogleMap>
       </div>
-      <img src={scrollTest} />
-      <img src={scrollTest} />
     </>
   );
 };
