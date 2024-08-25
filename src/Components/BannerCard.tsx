@@ -11,7 +11,7 @@ const BannerCard = () => {
     <div>
       <div className=" w-[500px] text-white flex flex-col justify-evenly">
         <div className="flex items-center">
-          <p className="text-5xl font-bold">Plan your journey</p>
+          <p className=" text-5xl font-bold">Plan your journey</p>
         </div>
 
         <p className="mt-3 text-md">From</p>
