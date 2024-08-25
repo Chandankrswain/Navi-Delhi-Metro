@@ -9,9 +9,12 @@ const BannerText = () => {
         </h1>
         <p className="text-[150px] leading-none font-bold text-white">Delhi</p>
         <p className="text-[150px] leading-none font-bold text-white">Metro</p>
-        <p className="m-2 mb-3 text-md text-white">
+        <p className="m-2 mb-3 text-md text-white ">
           Click here to plan through{" "}
-          <a className="text-white" href="https://www.google.com">
+          <a
+            className="text-white hover:text-[#04d9ff]"
+            href="https://www.google.com"
+          >
             Interactive map{" "}
           </a>
         </p>

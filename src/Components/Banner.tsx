@@ -35,7 +35,7 @@ const Banner = () => {
   return (
     <>
       <img
-        className="absolute top-0 left-0 w-full h-full object-cover z-[-10] max-h-screen blur-md"
+        className="absolute top-0 left-0 w-full h-full object-cover z-[-10] max-h-screen blur-lg"
         src={Metro}
         alt="Metro"
       />

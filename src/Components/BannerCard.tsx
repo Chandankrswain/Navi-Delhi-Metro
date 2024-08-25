@@ -9,10 +9,9 @@ import {
 const BannerCard = () => {
   return (
     <div>
-      <div className="border w-[450px] text-white p-4 flex flex-col justify-evenly">
+      <div className=" w-[500px] text-white flex flex-col justify-evenly">
         <div className="flex items-center">
-          <HiOutlineMapPin className="w-8 h-7" />
-          <p className="ml-1 text-xl font-bold">Plan your journey</p>
+          <p className="text-5xl font-bold">Plan your journey</p>
         </div>
 
         <p className="mt-3 text-md">From</p>
@@ -28,19 +27,23 @@ const BannerCard = () => {
         </div>
         <p className="text-xl font-bold mt-4">Advanced Filter</p>
         <div className=" flex w-full h-[200px] mt-4 justify-between">
-          <div className="flex flex-col w-full  justify-center justify-between items-start border-r border-gray-500 p-4 ">
-            <HiArrowUpRight className="ml-auto w-5 h-5 sm:w-6 sm:h-6 " />
-            <HiOutlineBolt className="w-20  h-20" />
+          <div className="flex flex-col w-full  justify-center justify-between items-start bg-[#2a2a2a] border-gray-500 p-4 ">
+            <div className="flex justify-between items-center w-full">
+              <HiOutlineBolt className="w-10  h-10" />
+              <HiArrowUpRight className="ml-auto w-5 h-5 sm:w-6 sm:h-6 " />
+            </div>
             <p className="text-md font-thin ">Shortest route</p>
           </div>
-          <div className="flex flex-col w-full  justify-center justify-between items-start  p-4">
-            <HiArrowUpRight className="ml-auto w-5 h-5 sm:w-6 sm:h-6 " />
-            <HiOutlineMap className="w-20  h-20" />
+          <div className="flex flex-col w-full  justify-center justify-between bg-[#424242] items-start  p-4">
+            <div className="flex justify-between items-center w-full">
+              <HiOutlineMap className="w-10  h-10" />
+              <HiArrowUpRight className="ml-auto w-5 h-5 sm:w-6 sm:h-6 " />
+            </div>
             <p className="text-md font-thin">Minimum interchange</p>
           </div>
         </div>
       </div>
-      <button className=" w-32 sm:w-full h-12 sm:h-14 text-white text-mds sm:text-md border font-['Share_Tech_Mono'] font-thin flex justify-center items-center">
+      <button className="mt-5 w-32 sm:w-full h-12 sm:h-14 text-white text-mds sm:text-md border font-['Share_Tech_Mono'] font-thin flex justify-center items-center">
         SHOW ROUTE AND FARE
         <HiArrowUpRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-4" />
       </button>
