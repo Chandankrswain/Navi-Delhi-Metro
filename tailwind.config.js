@@ -3,7 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   DarkMode: "class",
   theme: {
-    extend: {},
+    fontFamily: {
+      sans: ['"Inter"', "sans-serif"],
+    },
   },
   plugins: [],
 };

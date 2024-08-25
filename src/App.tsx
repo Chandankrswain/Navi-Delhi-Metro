@@ -7,9 +7,9 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <Banner />
+      {/* <Banner />
       <CardGroup />
-      <KnowYourStation />
+      <KnowYourStation /> */}
     </>
   );
 };

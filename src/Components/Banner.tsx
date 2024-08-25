@@ -1,12 +1,12 @@
-import BannerCard from './BannerCard';
-import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
-import BannerText from './BannerText';
+import BannerCard from "./BannerCard";
+// import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
+import BannerText from "./BannerText";
 
 const GOOGLE_MAP_KEY = import.meta.env.REACT_APP_GOOGLE_MAP_KEY;
 
 const mapContainerStyle = {
-  width: '100vw',
-  height: '100vh',
+  width: "100vw",
+  height: "100vh",
 };
 const center = {
   lat: 28.6448, // default latitude
@@ -14,31 +14,31 @@ const center = {
 };
 
 const Banner = () => {
-  const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: GOOGLE_MAP_KEY,
-  });
+  // const { isLoaded, loadError } = useLoadScript({
+  //   googleMapsApiKey: GOOGLE_MAP_KEY,
+  // });
 
-  if (loadError) {
-    return <div>Error loading maps</div>;
-  }
+  // if (loadError) {
+  //   return <div>Error loading maps</div>;
+  // }
 
-  if (!isLoaded) {
-    return <div>Loading maps</div>;
-  }
+  // if (!isLoaded) {
+  //   return <div>Loading maps</div>;
+  // }
 
-  const defaultMapOptions = {
-    fullscreenControl: false,
-  };
+  // const defaultMapOptions = {
+  //   fullscreenControl: false,
+  // };
 
-  console.log('key', GOOGLE_MAP_KEY);
+  // console.log("key", GOOGLE_MAP_KEY);
   return (
     <>
-      <div className='flex w-full absolute justify-center justify-evenly items-center h-screen '>
+      <div className="flex w-full absolute justify-center justify-evenly items-center h-screen ">
         <BannerCard />
         <BannerText />
       </div>
 
-      <div>
+      {/* <div>
         <GoogleMap
           mapContainerStyle={mapContainerStyle}
           zoom={11}
@@ -47,7 +47,7 @@ const Banner = () => {
         >
           <Marker position={center} />
         </GoogleMap>
-      </div>
+      </div> */}
     </>
   );
 };
