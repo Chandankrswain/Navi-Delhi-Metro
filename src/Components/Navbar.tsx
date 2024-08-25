@@ -17,12 +17,16 @@ const Navbar = () => {
         </div>
 
         {/* Right section of Navbar */}
-        <div>
-          <button className="w-32 sm:w-40 h-12 sm:h-14 text-white text-sm sm:text-md border font-['Share_Tech_Mono'] font-thin flex justify-center items-center">
+        <div className="flex justify-between item-center sm:w-[215px]">
+          <button className="invisible sm:visible w-32 sm:w-40 h-12 sm:h-14 text-white text-sm sm:text-md border font-['Share_Tech_Mono'] font-thin flex justify-center items-center">
             CONTACT
             <HiArrowUpRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-4" />
           </button>
-          
+          <div className="flex sm:h-8 flex-col justify-center mt-3 pr-2 space-y-1.5">
+            <span className="bg-white w-6 h-[2px]"></span>
+            <span className="bg-white w-6 h-[2px]"></span>
+            <span className="bg-white w-6 h-[2px]"></span>
+          </div>
         </div>
       </div>
     </div>
