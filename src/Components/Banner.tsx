@@ -1,17 +1,18 @@
 import BannerCard from "./BannerCard";
 // import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 import BannerText from "./BannerText";
+import Metro from "../images/metro-Banner.png";
 
-const GOOGLE_MAP_KEY = import.meta.env.REACT_APP_GOOGLE_MAP_KEY;
+// const GOOGLE_MAP_KEY = import.meta.env.REACT_APP_GOOGLE_MAP_KEY;
 
-const mapContainerStyle = {
-  width: "100vw",
-  height: "100vh",
-};
-const center = {
-  lat: 28.6448, // default latitude
-  lng: 77.216721, // default longitude
-};
+// const mapContainerStyle = {
+//   width: "100vw",
+//   height: "100vh",
+// };
+// const center = {
+//   lat: 28.6448, // default latitude
+//   lng: 77.216721, // default longitude
+// };
 
 const Banner = () => {
   // const { isLoaded, loadError } = useLoadScript({
@@ -33,7 +34,12 @@ const Banner = () => {
   // console.log("key", GOOGLE_MAP_KEY);
   return (
     <>
-      <div className="flex w-full absolute justify-center justify-evenly items-center h-screen ">
+      <img
+        className="absolute top-0 left-0 w-full h-full object-cover z-[-10] max-h-screen blur-md"
+        src={Metro}
+        alt="Metro"
+      />
+      <div className="flex sm:flex  w-full  justify-center justify-evenly items-center h-screen ">
         <BannerCard />
         <BannerText />
       </div>
