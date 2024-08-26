@@ -8,13 +8,6 @@ const App = () => {
     <>
       <Navbar />
       <Banner />
-      {/* <div className="bg-green-200 w-full h-[200px]">s</div>
-      <div className="bg-green-400 w-full h-[200px]">s</div>
-      <div className="bg-green-700 w-full h-[200px]">s</div>
-     */}
-
-      {/* <CardGroup />
-      <KnowYourStation /> */}
     </>
   );
 };

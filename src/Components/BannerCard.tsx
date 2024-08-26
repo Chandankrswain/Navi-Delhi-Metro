@@ -3,15 +3,14 @@ import {
   HiOutlineArrowsUpDown,
   HiOutlineBolt,
   HiOutlineMap,
-  HiOutlineMapPin,
 } from "react-icons/hi2";
 
 const BannerCard = () => {
   return (
     <div>
-      <div className=" w-[500px] text-white flex flex-col justify-evenly">
+      <div className="sm:w-[500px] text-white flex flex-col justify-evenly min-w-[342px] mt-3">
         <div className="flex items-center">
-          <p className=" text-5xl font-bold">Plan your journey</p>
+          <p className="text-3xl sm:text-5xl font-bold">Plan your journey</p>
         </div>
 
         <p className="mt-3 text-md">From</p>
@@ -43,9 +42,9 @@ const BannerCard = () => {
           </div>
         </div>
       </div>
-      <button className="mt-5 w-32 sm:w-full h-12 sm:h-14 text-white text-mds sm:text-md border font-['Share_Tech_Mono'] font-thin flex justify-center items-center">
+      <button className="mt-5 w-1/2 sm:w-full h-16 sm:h-16 text-white text-mds sm:text-md border font-['Share_Tech_Mono'] font-thin flex justify-center items-center">
         SHOW ROUTE AND FARE
-        <HiArrowUpRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-4" />
+        <HiArrowUpRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-4 mr-2 " />
       </button>
     </div>
   );
