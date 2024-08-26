@@ -10,7 +10,7 @@ const Banner = () => {
         src={Metro}
         alt="Metro"
       />
-      <div className="flex flex-col flex-col-reverse sm:flex-row p-3 w-full  justify-center justify-between sm:justify-evenly items-center h-screen mt-[5rem]">
+      <div className="flex flex-col flex-col-reverse sm:flex-row p-3 w-full  justify-center justify-between sm:justify-evenly items-center h-screen mt-[5rem] sm:mt-0">
         <BannerCard />
         <BannerText />
       </div>
