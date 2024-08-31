@@ -8,6 +8,7 @@ const App = () => {
     <>
       <Navbar />
       <Banner />
+      <CardGroup />
     </>
   );
 };

@@ -4,7 +4,7 @@ import { HiArrowUpRight } from "react-icons/hi2";
 
 const Navbar = () => {
   return (
-    <div className="w-screen h-[8rem] flex sm:flex-row justify-center items-center sticky sm:fixed ">
+    <div className="w-screen h-[8rem] flex sm:flex-row justify-center items-center  ">
       <div className="flex justify-between w-full sm:w-9/12 max-h-[6rem] items-center p-4 sm:p-0">
         {/* Left section of Navbar */}
         <div className="flex sm:flex-row justify-between items-center max-w-full sm:max-w-[200px] items-center p-[10px]">
