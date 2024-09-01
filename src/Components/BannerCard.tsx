@@ -15,14 +15,20 @@ const BannerCard = () => {
 
         <p className="mt-3 text-md">From</p>
         <div className="flex items-center justify-between">
-          <input className="border border-white bg-transparent w-full h-[60px] border-1 p-4 text-lg mt-4 border-red-900"></input>
+          <input
+            className="border border-white bg-transparent w-full h-[60px] border-1 p-4 text-lg mt-4 "
+            placeholder="Enter Metro Station"
+          ></input>
         </div>
         <div className="flex items-center justify-between mt-5">
           <p className="text-md">To</p>
           <HiOutlineArrowsUpDown className="w-6 h-6" />
         </div>
         <div className="flex items-center  justify-between">
-          <input className="border border-white bg-transparent w-full h-[60px] rounded-0 border-1 p-4 text-lg mt-4 border-red-900"></input>
+          <input
+            className="border border-white bg-transparent w-full h-[60px] rounded-0 border-1 p-4 text-lg mt-4 "
+            placeholder="Enter Metro Station"
+          ></input>
         </div>
         <p className="text-xl font-bold mt-4">Advanced Filter</p>
         <div className=" flex w-full h-[200px] mt-4 justify-between">

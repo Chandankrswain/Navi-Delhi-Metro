@@ -10,13 +10,12 @@ const App = () => {
       <Navbar />
       <Banner />
       <NoticesAlerts />
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      {/* <CardGroup /> */}
+      <div className=" flex w-full h-[700px] justify-center ">
+        <div className=" flex sm:w-9/12">
+          <KnowYourStation />
+          <CardGroup />
+        </div>
+      </div>
     </>
   );
 };

@@ -1,17 +1,37 @@
 const CardGroup = () => {
   return (
-    <div className="flex items-center">
-      <div className=" flex flex-col justify-between  w-[30%] h-[180px] rounded-2xl p-4 ">
-        <p className="text-white text-8xl font-bold ">393</p>
-        <p className="text-white text-xl ml-1">Total Network length</p>
+    <div className="flex flex-wrap items-start w-[50%] justify-evenly ">
+      <div className=" flex flex-col p-4 w-[40%] h-[191px] border-l p-2 border-[#7a7a7a] ">
+        <p className="text-white text-8xl font-medium mb-1 tracking-wide">
+          393
+        </p>
+        <p className="text-[#00FFFF] text-sm ml-1 font-['Share_Tech_Mono'] tracking-widest">
+          TOTAL NETWORK LENGTH
+        </p>
       </div>
-      <div className="flex flex-col justify-between  w-[30%] h-[180px] rounded-2xl p-4  ">
-        <p className="text-white text-8xl font-bold ">12 </p>
-        <p className="text-white text-xl ml-2">Total no of lines</p>
+      <div className="flex flex-col p-4 w-[40%] h-[191px] border-l p-2 border-[#7a7a7a]">
+        <p className="text-white text-8xl font-medium mb-1 tracking-wide">
+          12{" "}
+        </p>
+        <p className="text-[#00FFFF] text-sm ml-2 font-['Share_Tech_Mono'] tracking-widest">
+          TOTAL NO OF LINES
+        </p>
       </div>
-      <div className="flex flex-col justify-between w-[30%] h-[180px] rounded-2xl p-4 ">
-        <p className="text-white text-8xl font-bold ">288 </p>
-        <p className="text-white text-xl ml-2">Total no of stations</p>
+      <div className="flex flex-col  p-4 w-[40%] h-[191px] border-l p-2 border-[#7a7a7a]">
+        <p className="text-white text-8xl font-medium mb-1 tracking-wide ">
+          288{" "}
+        </p>
+        <p className="text-[#00FFFF] text-sm ml-2 font-['Share_Tech_Mono'] tracking-widest">
+          TOTAL NO OF STATIONS
+        </p>
+      </div>
+      <div className="flex flex-col p-4 w-[40%] h-[191px] border-l p-2 border-[#7a7a7a]">
+        <p className="text-white text-8xl font-medium mb-1 tracking-wide">
+          2002
+        </p>
+        <p className="text-[#00FFFF] text-sm ml-2 font-['Share_Tech_Mono'] tracking-widest">
+          YEAR FOUNDED
+        </p>
       </div>
     </div>
   );

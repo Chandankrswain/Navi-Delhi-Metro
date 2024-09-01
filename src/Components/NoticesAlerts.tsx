@@ -1,7 +1,7 @@
 const NoticesAlerts = () => {
   return (
-    <div className="flex flex-col w-full justify-center items-center">
-      <div className=" sm:w-10/12 h-[164px] p-5 sm:p-2">
+    <div className="flex flex-col w-full justify-center items-center mb-[11rem]">
+      <div className=" sm:w-9/12 h-[182px] p-9 sm:p-2">
         <p className=" text-white text-[1.5rem] sm:text-[2rem] font-medium mb-3  ">
           Notices and Alerts
         </p>
@@ -11,7 +11,7 @@ const NoticesAlerts = () => {
               <p className="text-[#7a7a7a] font-['Share_Tech_Mono']">
                 28-8-2024
               </p>
-              <p className="text-white sm:text-md font-bold">
+              <p className="text-[#c9c9c9] sm:text-md font-bold">
                 DMRC launches special drive to prevent unlawful entry of male
                 passengers in ladies coaches
               </p>
@@ -20,7 +20,7 @@ const NoticesAlerts = () => {
               <p className="text-[#7a7a7a] font-['Share_Tech_Mono']">
                 23-8-2024
               </p>
-              <p className="text-white sm:text-md font-bold">
+              <p className="text-[#c9c9c9] sm:text-md font-bold">
                 Timing for commnecement of sunday services on Phase-III
                 corridors revised
               </p>
@@ -29,7 +29,7 @@ const NoticesAlerts = () => {
               <p className="text-[#7a7a7a] font-['Share_Tech_Mono']">
                 21-8-2024
               </p>
-              <p className="text-white sm:text-md font-bold">
+              <p className="text-[#c9c9c9] sm:text-md font-bold">
                 DMRC Completes Major Tunneling Milestone on Phase 4 Golden Line
                 Breakthrough at Chhatarpur Mandir Station
               </p>

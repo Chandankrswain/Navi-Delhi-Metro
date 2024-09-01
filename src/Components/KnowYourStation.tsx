@@ -1,19 +1,34 @@
+import { HiArrowUpRight, HiOutlineArrowDownTray } from "react-icons/hi2";
 import DelhiMetroLogo from "../images/logo.png";
 
 const KnowYourStation = () => {
   return (
-    <div className="flex flex-col bg-green-700 w-[500px] h-[170px] rounded-xl p-4 justify-between">
-      <div className="flex items-center">
-        <img className="w-8 h-7 justify-start" src={DelhiMetroLogo} />
-        <p className="ml-2">Know Your Station</p>
+    <div className="max-w-[50%] flex flex-col items-start">
+      <p className="text-white text-[92px] font-extrabold leading-none mb-4">
+        KNOW YOUR STATION.
+      </p>
+      <p className="text-[#c9c9c9] font-light text-[20px] w-full pl-12 pr-9 text-justify mb-7 leading-snug">
+        Get an inside look at your station, where music, community, and culture
+        come together. Meet our team, explore the station, and see why we’re the
+        station you love.
+      </p>
+      <div className="flex mt-3 w-full mb-5 pl-12 ">
+        <input
+          className="border border-white border-r-0 bg-transparent w-[70%] h-[72px] p-4 text-lg font-thin text-white focus:outline-none focus:border-white"
+          placeholder="Search Metro Station"
+        />
+        <button className="border border-white border-l-0 w-[10%] h-[72px] flex items-center justify-center">
+          <HiArrowUpRight className="text-white w-6 h-6" />
+        </button>
       </div>
-      <input
-        className="rounded-md h-10 p-3"
-        placeholder="Enter Your Station Name "
-      />
-      <button className=" p-2 pl-3 pr-3 bg-red-800 rounded-md text-white self-end ">
-        Advanced Search
-      </button>
+      <div className="flex mt-3 w-full mb-9 pl-12 ">
+        <button className="border-t border-[#7a7a7a] w-[75%] h-[72px] text-[#00FFFF] font-['Share_Tech_Mono'] ">
+          YOUR JOURNEY WITH INTERCATIVE AND CLICKABLE MAP
+        </button>
+        <button className="border-t border-[#7a7a7a] w-[10%] h-[72px] flex items-center justify-center">
+          <HiArrowUpRight className="text-white w-6 h-6" />
+        </button>
+      </div>
     </div>
   );
 };
