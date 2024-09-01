@@ -13,17 +13,15 @@ const BannerText = () => {
         <p className="text-[3rem] sm:text-[9rem] leading-none font-bold text-white">
           Metro
         </p>
-        <p className="ml:0 sm:m-2 mt-2 mb-3 text-sm sm:text-md text-white ">
-          Click here to plan through{" "}
-          <a
-            className="text-white hover:text-[#04d9ff]"
-            href="https://www.google.com"
-          >
-            Interactive map{" "}
-          </a>
-        </p>
+        <a
+          className="ml:0 sm:m-2 mt-2 mb-3 text-sm sm:text-md text-white hover:text-[#04d9ff]"
+          href="../map/Network-Map-24-May-2024-Bilingual.679eea07.pdf"
+          download="Metro Map"
+        >
+          Click here to plan through Interactive map{" "}
+        </a>
       </div>
-      <div className="flex bg-transparent border  sm:w-[15rem] sm:h-[4rem] text-white sm:mt-2 sm:ml-2 p-2 font-bold w-[250px] justify-evenly justify-center items-center  ">
+      <div className="flex bg-transparent border  sm:w-[15rem] sm:h-[4rem] text-white sm:mt-5 sm:ml-2 p-2 font-bold w-[250px] justify-evenly justify-center items-center  ">
         <HiOutlineGlobeAlt className="w-6 h-6" />
         <button className="font-['Share_Tech_Mono'] text-md font-thin ">
           SELECT YOUR LANGUAGE
