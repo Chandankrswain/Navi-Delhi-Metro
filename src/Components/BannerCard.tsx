@@ -17,7 +17,7 @@ const BannerCard = () => {
         <div className="flex items-center justify-between">
           <input
             className="border border-white bg-transparent w-full h-[60px] border-1 p-4 text-lg mt-4 "
-            placeholder="Enter Metro Station"
+            placeholder="Enter the Departure Station"
           ></input>
         </div>
         <div className="flex items-center justify-between mt-5">
@@ -27,7 +27,7 @@ const BannerCard = () => {
         <div className="flex items-center  justify-between">
           <input
             className="border border-white bg-transparent w-full h-[60px] rounded-0 border-1 p-4 text-lg mt-4 "
-            placeholder="Enter Metro Station"
+            placeholder="Enter the Arrival Station"
           ></input>
         </div>
         <p className="text-xl font-bold mt-4">Advanced Filter</p>
