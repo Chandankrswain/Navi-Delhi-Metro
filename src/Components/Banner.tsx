@@ -5,7 +5,7 @@ import NoticesAlerts from "./NoticesAlerts";
 
 const Banner = () => {
   return (
-    <div className="mb-[3rem] sm:mb-[8rem] ">
+    <div className="mb-[1em] sm:mb-[8rem] ">
       <img
         className="hidden sm:block sm:absolute  w-full h-full object-cover z-[-10] max-h-screen blur-lg"
         src={Metro}
