@@ -18,9 +18,9 @@ const App = () => {
         </div>
       </div>
       <div className="flex w-full justify-center items-center mb-16">
-        <div className="flex sm:flex-col sm:w-9/12 items-center justify-center">
-          <p className="text-white sm:text-[96px] font-extrabold leading-none mb-16">
-            OUR SERVICE.
+        <div className="flex flex-col sm:w-9/12 items-center justify-center">
+          <p className="text-white text-[35px] sm:text-[96px] font-extrabold leading-none mb-20">
+            OUR SERVICES.
           </p>
           <ServicesCards />
         </div>

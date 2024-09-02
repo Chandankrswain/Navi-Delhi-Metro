@@ -10,9 +10,9 @@ import carbonlite from "../images/card8.png";
 
 const ServicesCards = () => {
   return (
-    <div className="flex flex-wrap justify-between ">
-      <div className="flex sm:flex-col w-[320px] h-[338px] justify-between  border-t border-b border-[#7a7a7a]  pt-5 pb-5">
-        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 ml-auto " />
+    <div className="flex flex-wrap justify-between">
+      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between  border-t border-b border-[#7a7a7a] pl-5 pr-5 sm:pl-0 sm:pr-0 pt-5 pb-5">
+        <HiArrowUpRight className="text-white w-8 h-7 ml-auto " />
         <div className="flex justify-between">
           <img className="w-14 h-14" src={dollar} alt="" />
           <button className="text-white text-[11px] bg-black w-11 h-6 mr-4">
@@ -20,7 +20,7 @@ const ServicesCards = () => {
           </button>
         </div>
         <p className="text-white text-[20px] font-medium ">Fare Calculator</p>
-        <p className="text-white text-[15px] text-[#c4c4c4] h-[75px]">
+        <p className="text-[15px] text-[#c4c4c4] h-[75px] font-light">
           The Fare Calculator is a quick and easy tool to help you estimate your
           travel costs.
         </p>
@@ -28,13 +28,13 @@ const ServicesCards = () => {
           FARECAL.AI
         </p>
       </div>
-      <div className="flex sm:flex-col w-[320px] h-[338px] justify-between border-t border-b border-[#7a7a7a] pt-5 pb-5">
-        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 ml-auto " />
+      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between border-t border-b border-[#7a7a7a] pl-5 pr-5 sm:pl-0 sm:pr-0 pt-5 pb-5">
+        <HiArrowUpRight className="text-white w-8 h-7 ml-auto " />
         <div>
           <img className="w-14 h-14" src={guide} alt="" />
         </div>
         <p className="text-white text-[20px] font-medium ">Tour Guide</p>
-        <p className="text-white text-[15px] text-[#c4c4c4] h-[75px]">
+        <p className=" text-[15px] text-[#c4c4c4] h-[75px] font-light">
           A Tour Guide offers a personalized and informative experience, helping
           you explore new places with ease.
         </p>
@@ -42,13 +42,13 @@ const ServicesCards = () => {
           TOURGUIDE.COM
         </p>
       </div>
-      <div className="flex sm:flex-col w-[320px] h-[338px] justify-between border-t border-b border-[#7a7a7a] pt-5 pb-5">
-        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 ml-auto " />
+      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between border-t border-b border-[#7a7a7a] pl-5 pr-5 sm:pl-0 sm:pr-0 pt-5 pb-5">
+        <HiArrowUpRight className="text-white w-8 h-7 ml-auto " />
         <div>
           <img className="w-14 h-14" src={museum} alt="" />
         </div>
         <p className="text-white text-[20px] font-medium">Metro Museum</p>
-        <p className="text-white text-[15px] text-[#c4c4c4] h-[75px]">
+        <p className=" text-[15px] text-[#c4c4c4] h-[75px] font-light">
           The Metro Museum offers a fascinating glimpse into the history and
           evolution of urban transit.
         </p>
@@ -56,13 +56,13 @@ const ServicesCards = () => {
           MUSEUM.AI.IO
         </p>
       </div>
-      <div className="flex sm:flex-col w-[320px] h-[338px] justify-between border-t border-b border-[#7a7a7a] pt-5 pb-5">
-        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 ml-auto " />
+      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between border-t border-b border-[#7a7a7a] pl-5 pr-5 sm:pl-0 sm:pr-0 pt-5 pb-5">
+        <HiArrowUpRight className="text-white w-8 h-7 ml-auto " />
         <div>
           <img className="w-14 h-14" src={lost} alt="" />
         </div>
         <p className="text-white text-[20px] font-medium">Lost and Found</p>
-        <p className="text-white text-[15px] text-[#c4c4c4] h-[75px]">
+        <p className=" text-[15px] text-[#c4c4c4] h-[75px] font-light">
           The Metro Lost and Found service is dedicated to reuniting passengers
           with their lost belongings.
         </p>
@@ -70,13 +70,13 @@ const ServicesCards = () => {
           LOSTANDFOUND.IN
         </p>
       </div>
-      <div className="flex sm:flex-col w-[320px] h-[338px] justify-between  border-b border-[#7a7a7a]  pt-5 pb-5">
-        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 ml-auto " />
+      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between  border-b border-[#7a7a7a] pl-5 pr-5 sm:pl-0 sm:pr-0  pt-5 pb-5">
+        <HiArrowUpRight className="text-white w-8 h-7 ml-auto " />
         <div>
           <img className="w-14 h-14" src={advisory} alt="" />
         </div>
         <p className="text-white text-[20px] font-medium">Travel Advisory</p>
-        <p className="text-white text-[15px] text-[#c4c4c4] h-[75px]">
+        <p className=" text-[15px] text-[#c4c4c4] h-[75px] font-light">
           A Travel Advisory provides essential information to ensure a safe and
           smooth journey.
         </p>
@@ -84,13 +84,13 @@ const ServicesCards = () => {
           ADVISORY.AI
         </p>
       </div>
-      <div className="flex sm:flex-col w-[320px] h-[338px] justify-between  border-b border-[#7a7a7a]  pt-5 pb-5">
-        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 ml-auto " />
+      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between  border-b border-[#7a7a7a] pl-5 pr-5 sm:pl-0 sm:pr-0  pt-5 pb-5">
+        <HiArrowUpRight className="text-white w-8 h-7 ml-auto " />
         <div>
           <img className="w-14 h-14" src={tickets} alt="" />
         </div>
         <p className="text-white text-[20px] font-medium">Tickets</p>
-        <p className="text-white text-[15px] text-[#c4c4c4] h-[75px]">
+        <p className=" text-[15px] text-[#c4c4c4] h-[75px] font-light">
           Metro tickets are your gateway to a convenient and efficient transit
           experience.
         </p>
@@ -98,15 +98,15 @@ const ServicesCards = () => {
           TICKET.IN
         </p>
       </div>
-      <div className="flex sm:flex-col w-[320px] h-[338px] justify-between  border-b border-[#7a7a7a] pt-5 pb-5">
-        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 ml-auto " />
+      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between  border-b border-[#7a7a7a] pl-5 pr-5 sm:pl-0 sm:pr-0 pt-5 pb-5">
+        <HiArrowUpRight className="text-white w-8 h-7 ml-auto " />
         <div>
           <img className="w-14 h-14" src={lastmile} alt="" />
         </div>
         <p className="text-white text-[20px] font-medium">
           Last Mile Connectivity
         </p>
-        <p className="text-white text-[15px] text-[#c4c4c4] h-[75px]">
+        <p className="text-[15px] text-[#c4c4c4] h-[75px] font-light">
           Last Mile Connectivity bridges metro stations to your destination with
           ease.
         </p>
@@ -114,8 +114,8 @@ const ServicesCards = () => {
           LASTMILE.COM
         </p>
       </div>
-      <div className="flex sm:flex-col w-[320px] h-[338px] justify-between  border-b border-[#7a7a7a]  pt-5 pb-5">
-        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 ml-auto " />
+      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between  border-b border-[#7a7a7a] pl-5 pr-5 sm:pl-0 sm:pr-0  pt-5 pb-5">
+        <HiArrowUpRight className="text-white w-8 h-7 ml-auto " />
         <div className="flex justify-between">
           <img className="w-14 h-14" src={carbonlite} alt="" />
           <button className="text-white text-[11px] bg-black w-11 h-6 mr-4">
@@ -125,7 +125,7 @@ const ServicesCards = () => {
         <p className="text-white text-[20px] font-medium">
           CarbonLite Metro Travel
         </p>
-        <p className="text-white text-[15px] text-[#c4c4c4] h-[75px]">
+        <p className=" text-[15px] text-[#c4c4c4] h-[75px] font-light">
           CarbonLite Metro Travel promotes eco-friendly transit by reducing
           carbon emissions through energy-efficient metro systems.
         </p>
