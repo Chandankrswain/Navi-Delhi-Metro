@@ -1,111 +1,137 @@
 import { HiArrowUpRight } from "react-icons/hi2";
+import dollar from "../images/card1.png";
+import guide from "../images/card2.png";
+import museum from "../images/card3.png";
+import lost from "../images/card4.png";
+import advisory from "../images/card5.png";
+import tickets from "../images/card6.png";
+import lastmile from "../images/card7.png";
+import carbonlite from "../images/card8.png";
 
 const ServicesCards = () => {
   return (
     <div className="flex flex-wrap justify-between ">
-      <div className="flex sm:flex-col w-[307px] h-[338px] justify-between border-t border-b border-[#7a7a7a] mb-5">
-        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 " />
-        <div>
-          <img />
-          <button className="text-white">NOTE</button>
+      <div className="flex sm:flex-col w-[320px] h-[338px] justify-between  border-t border-b border-[#7a7a7a]  pt-5 pb-5">
+        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 ml-auto " />
+        <div className="flex justify-between">
+          <img className="w-14 h-14" src={dollar} alt="" />
+          <button className="text-white text-[11px] bg-black w-11 h-6 mr-4">
+            NOTE
+          </button>
         </div>
-        <p className="text-white text-[20px] font-bold">Fare Calculator</p>
-        <p className="text-white text-[14px]">
+        <p className="text-white text-[20px] font-medium ">Fare Calculator</p>
+        <p className="text-white text-[15px] text-[#c4c4c4] h-[75px]">
           The Fare Calculator is a quick and easy tool to help you estimate your
-          travel costs. Simply enter your starting and ending stations
+          travel costs.
         </p>
-        <p className="text-[#00ffff]">FARE CAL</p>
+        <p className="text-[#00ffff] text-[14px] font-['Share_Tech_Mono'] tracking-widest">
+          FARECAL.AI
+        </p>
       </div>
-      <div className="flex sm:flex-col w-[307px] h-[338px] justify-between border-t border-b border-[#7a7a7a]">
-        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 " />
+      <div className="flex sm:flex-col w-[320px] h-[338px] justify-between border-t border-b border-[#7a7a7a] pt-5 pb-5">
+        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 ml-auto " />
         <div>
-          <img />
-          <button className="text-white">NOTE</button>
+          <img className="w-14 h-14" src={guide} alt="" />
         </div>
-        <p className="text-white text-[20px] font-bold">Fare Calculator</p>
-        <p className="text-white text-[14px]">
-          The Fare Calculator is a quick and easy tool to help you estimate your
-          travel costs. Simply enter your starting and ending stations
+        <p className="text-white text-[20px] font-medium ">Tour Guide</p>
+        <p className="text-white text-[15px] text-[#c4c4c4] h-[75px]">
+          A Tour Guide offers a personalized and informative experience, helping
+          you explore new places with ease.
         </p>
-        <p className="text-[#00ffff]">FARE CAL</p>
+        <p className="text-[#00ffff] text-[14px] font-['Share_Tech_Mono'] tracking-widest">
+          TOURGUIDE.COM
+        </p>
       </div>
-      <div className="flex sm:flex-col w-[307px] h-[338px] justify-between border-t border-b border-[#7a7a7a]">
-        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 " />
+      <div className="flex sm:flex-col w-[320px] h-[338px] justify-between border-t border-b border-[#7a7a7a] pt-5 pb-5">
+        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 ml-auto " />
         <div>
-          <img />
-          <button className="text-white">NOTE</button>
+          <img className="w-14 h-14" src={museum} alt="" />
         </div>
-        <p className="text-white text-[20px] font-bold">Fare Calculator</p>
-        <p className="text-white text-[14px]">
-          The Fare Calculator is a quick and easy tool to help you estimate your
-          travel costs. Simply enter your starting and ending stations
+        <p className="text-white text-[20px] font-medium">Metro Museum</p>
+        <p className="text-white text-[15px] text-[#c4c4c4] h-[75px]">
+          The Metro Museum offers a fascinating glimpse into the history and
+          evolution of urban transit.
         </p>
-        <p className="text-[#00ffff]">FARE CAL</p>
+        <p className="text-[#00ffff] text-[14px] font-['Share_Tech_Mono'] tracking-widest">
+          MUSEUM.AI.IO
+        </p>
       </div>
-      <div className="flex sm:flex-col w-[307px] h-[338px] justify-between border-t border-b border-[#7a7a7a]">
-        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 " />
+      <div className="flex sm:flex-col w-[320px] h-[338px] justify-between border-t border-b border-[#7a7a7a] pt-5 pb-5">
+        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 ml-auto " />
         <div>
-          <img />
-          <button className="text-white">NOTE</button>
+          <img className="w-14 h-14" src={lost} alt="" />
         </div>
-        <p className="text-white text-[20px] font-bold">Fare Calculator</p>
-        <p className="text-white text-[14px]">
-          The Fare Calculator is a quick and easy tool to help you estimate your
-          travel costs. Simply enter your starting and ending stations
+        <p className="text-white text-[20px] font-medium">Lost and Found</p>
+        <p className="text-white text-[15px] text-[#c4c4c4] h-[75px]">
+          The Metro Lost and Found service is dedicated to reuniting passengers
+          with their lost belongings.
         </p>
-        <p className="text-[#00ffff]">FARE CAL</p>
+        <p className="text-[#00ffff] text-[14px] font-['Share_Tech_Mono'] tracking-widest">
+          LOSTANDFOUND.IN
+        </p>
       </div>
-      <div className="flex sm:flex-col w-[307px] h-[338px] justify-between border-t border-b border-[#7a7a7a]">
-        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 " />
+      <div className="flex sm:flex-col w-[320px] h-[338px] justify-between  border-b border-[#7a7a7a]  pt-5 pb-5">
+        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 ml-auto " />
         <div>
-          <img />
-          <button className="text-white">NOTE</button>
+          <img className="w-14 h-14" src={advisory} alt="" />
         </div>
-        <p className="text-white text-[20px] font-bold">Fare Calculator</p>
-        <p className="text-white text-[14px]">
-          The Fare Calculator is a quick and easy tool to help you estimate your
-          travel costs. Simply enter your starting and ending stations
+        <p className="text-white text-[20px] font-medium">Travel Advisory</p>
+        <p className="text-white text-[15px] text-[#c4c4c4] h-[75px]">
+          A Travel Advisory provides essential information to ensure a safe and
+          smooth journey.
         </p>
-        <p className="text-[#00ffff]">FARE CAL</p>
+        <p className="text-[#00ffff] text-[14px] font-['Share_Tech_Mono'] tracking-widest">
+          ADVISORY.AI
+        </p>
       </div>
-      <div className="flex sm:flex-col w-[307px] h-[338px] justify-between border-t border-b border-[#7a7a7a]">
-        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 " />
+      <div className="flex sm:flex-col w-[320px] h-[338px] justify-between  border-b border-[#7a7a7a]  pt-5 pb-5">
+        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 ml-auto " />
         <div>
-          <img />
-          <button className="text-white">NOTE</button>
+          <img className="w-14 h-14" src={tickets} alt="" />
         </div>
-        <p className="text-white text-[20px] font-bold">Fare Calculator</p>
-        <p className="text-white text-[14px]">
-          The Fare Calculator is a quick and easy tool to help you estimate your
-          travel costs. Simply enter your starting and ending stations
+        <p className="text-white text-[20px] font-medium">Tickets</p>
+        <p className="text-white text-[15px] text-[#c4c4c4] h-[75px]">
+          Metro tickets are your gateway to a convenient and efficient transit
+          experience.
         </p>
-        <p className="text-[#00ffff]">FARE CAL</p>
+        <p className="text-[#00ffff] text-[14px] font-['Share_Tech_Mono'] tracking-widest">
+          TICKET.IN
+        </p>
       </div>
-      <div className="flex sm:flex-col w-[307px] h-[338px] justify-between border-t border-b border-[#7a7a7a]">
-        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 " />
+      <div className="flex sm:flex-col w-[320px] h-[338px] justify-between  border-b border-[#7a7a7a] pt-5 pb-5">
+        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 ml-auto " />
         <div>
-          <img />
-          <button className="text-white">NOTE</button>
+          <img className="w-14 h-14" src={lastmile} alt="" />
         </div>
-        <p className="text-white text-[20px] font-bold">Fare Calculator</p>
-        <p className="text-white text-[14px]">
-          The Fare Calculator is a quick and easy tool to help you estimate your
-          travel costs. Simply enter your starting and ending stations
+        <p className="text-white text-[20px] font-medium">
+          Last Mile Connectivity
         </p>
-        <p className="text-[#00ffff]">FARE CAL</p>
+        <p className="text-white text-[15px] text-[#c4c4c4] h-[75px]">
+          Last Mile Connectivity bridges metro stations to your destination with
+          ease.
+        </p>
+        <p className="text-[#00ffff] text-[14px] font-['Share_Tech_Mono'] tracking-widest">
+          LASTMILE.COM
+        </p>
       </div>
-      <div className="flex sm:flex-col w-[307px] h-[338px] justify-between border-t border-b border-[#7a7a7a]">
-        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 " />
-        <div>
-          <img />
-          <button className="text-white">NOTE</button>
+      <div className="flex sm:flex-col w-[320px] h-[338px] justify-between  border-b border-[#7a7a7a]  pt-5 pb-5">
+        <HiArrowUpRight className="text-white sm:w-8 sm:h-7 ml-auto " />
+        <div className="flex justify-between">
+          <img className="w-14 h-14" src={carbonlite} alt="" />
+          <button className="text-white text-[11px] bg-black w-11 h-6 mr-4">
+            NEW
+          </button>
         </div>
-        <p className="text-white text-[20px] font-bold">Fare Calculator</p>
-        <p className="text-white text-[14px]">
-          The Fare Calculator is a quick and easy tool to help you estimate your
-          travel costs. Simply enter your starting and ending stations
+        <p className="text-white text-[20px] font-medium">
+          CarbonLite Metro Travel
         </p>
-        <p className="text-[#00ffff]">FARE CAL</p>
+        <p className="text-white text-[15px] text-[#c4c4c4] h-[75px]">
+          CarbonLite Metro Travel promotes eco-friendly transit by reducing
+          carbon emissions through energy-efficient metro systems.
+        </p>
+        <p className="text-[#00ffff] text-[14px] font-['Share_Tech_Mono'] tracking-widest">
+          CARBON.LITE.IO
+        </p>
       </div>
     </div>
   );

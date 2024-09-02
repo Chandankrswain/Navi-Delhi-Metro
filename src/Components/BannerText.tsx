@@ -14,7 +14,7 @@ const BannerText = () => {
           Metro
         </p>
         <a
-          className="ml:0 sm:m-2 mt-2 mb-3 text-sm sm:text-md text-white hover:text-[#04d9ff]"
+          className="ml:0 sm:m-2 mt-2 mb-3 text-sm sm:text-md text-white hover:text-[#04d9ff] "
           href="../map/Network-Map-24-May-2024-Bilingual.679eea07.pdf"
           download="Metro Map"
         >
