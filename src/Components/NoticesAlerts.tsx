@@ -1,6 +1,6 @@
 const NoticesAlerts = () => {
   return (
-    <div className="flex flex-col w-full justify-center items-center mb-[18rem] sm:mb-[11rem]">
+    <div className="flex flex-col w-full justify-center items-center mb-[18rem] sm:mb-[14rem]">
       <div className=" sm:w-9/12 h-[182px] p-9 sm:p-2">
         <p className=" text-white text-[1.5rem] sm:text-[2rem] font-medium mb-3  ">
           Notices and Alerts
