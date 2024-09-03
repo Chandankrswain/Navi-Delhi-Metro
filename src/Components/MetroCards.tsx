@@ -45,7 +45,7 @@ const MetroCards = () => {
           <p className="text-white text-[20px] font-semibold">Blue Line 1</p>
         </div>
       </div>
-      <div className="flex flex-col justify-between bg-[url('/src/images/blue1.png')] w-[300px] h-[500px] border border-[#7a7a7a] bg-contain bg-no-repeat p-7 mb-10">
+      <div className="flex flex-col justify-between bg-[url('/src/images/blue.png')] w-[300px] h-[500px] border border-[#7a7a7a] bg-contain bg-no-repeat p-7 mb-10">
         <p className="text-[#7a7a7a] font-['Share_Tech_Mono'] tracking-widest">
           NORMAL SERVICE
         </p>
