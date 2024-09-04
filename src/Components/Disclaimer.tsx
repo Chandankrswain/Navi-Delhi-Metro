@@ -7,7 +7,7 @@ const Disclaimer = () => {
         </p>
         <div className="border-t border-b border-[#7a7a7a] pt-6 pb-6 ">
           <p className="text-[#c9c9c9] sm:text-md font-semibold sm:animate-marquee sm:whitespace-nowrap text-justify">
-            The information provided in DMRC’s website i.e. train timings,
+            The information provided in DMRC's website i.e. train timings,
             runtime, station facilities etc. is indicative and subject to
             change. Commuters are advised to plan their journey in advance as
             actual journey time may vary as per the prevailing conditions. DMRC
