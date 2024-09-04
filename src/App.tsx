@@ -1,5 +1,6 @@
 import Banner from "./Components/Banner";
 import CardGroup from "./Components/CardGroup";
+import Disclaimer from "./Components/Disclaimer";
 import KnowYourStation from "./Components/KnowYourStation";
 import MetroCards from "./Components/MetroCards";
 import Navbar from "./Components/Navbar";
@@ -20,7 +21,7 @@ const App = () => {
         </div>
       </div>
 
-      <div className="flex w-full justify-center items-center mb-[14rem]">
+      <div className="flex w-full justify-center items-center mb-[11rem]">
         <div className="flex flex-col sm:w-9/12 items-center justify-center">
           <p className="text-white text-[35px] sm:text-[96px] font-extrabold leading-none mb-20">
             OUR SERVICES.
@@ -30,16 +31,18 @@ const App = () => {
       </div>
 
       <div className=" flex w-full  justify-center items-center mb-16">
-        <div className="flex flex-col sm:w-9/12 ">
+        <div className="flex flex-col sm:w-9/12 items-center sm:items-start">
           <p className="text-white text-[14px] mb-3 font-['Share_Tech_Mono'] tracking-widest">
             TOTAL NUMBER OF
           </p>
-          <p className="text-white text-[35px] sm:text-[96px] font-extrabold leading-none mb-20">
+          <p className="text-white text-[40px] sm:text-[96px] font-extrabold leading-none mb-20">
             METRO LINES.
           </p>
           <MetroCards />
         </div>
       </div>
+
+      <Disclaimer />
     </>
   );
 };

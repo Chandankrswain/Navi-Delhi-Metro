@@ -11,7 +11,7 @@ import carbonlite from "../images/card8.png";
 const ServicesCards = () => {
   return (
     <div className="flex flex-wrap justify-between">
-      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between  border-t border-b border-[#7a7a7a] pl-5 pr-5 sm:pl-0 sm:pr-0 pt-5 pb-5">
+      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between  border-t border-b border-[#7a7a7a] pl-8 pr-8 sm:pl-0 sm:pr-0 pt-5 pb-5">
         <HiArrowUpRight className="text-white w-8 h-7 ml-auto " />
         <div className="flex justify-between">
           <img className="w-14 h-14" src={dollar} alt="" />
@@ -28,7 +28,7 @@ const ServicesCards = () => {
           FARECAL.AI
         </p>
       </div>
-      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between border-t border-b border-[#7a7a7a] pl-5 pr-5 sm:pl-0 sm:pr-0 pt-5 pb-5">
+      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between border-t border-b border-[#7a7a7a] pl-8 pr-8 sm:pl-0 sm:pr-0 pt-5 pb-5">
         <HiArrowUpRight className="text-white w-8 h-7 ml-auto " />
         <div>
           <img className="w-14 h-14" src={guide} alt="" />
@@ -42,7 +42,7 @@ const ServicesCards = () => {
           TOURGUIDE.COM
         </p>
       </div>
-      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between border-t border-b border-[#7a7a7a] pl-5 pr-5 sm:pl-0 sm:pr-0 pt-5 pb-5">
+      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between border-t border-b border-[#7a7a7a] pl-8 pr-8 sm:pl-0 sm:pr-0 pt-5 pb-5">
         <HiArrowUpRight className="text-white w-8 h-7 ml-auto " />
         <div>
           <img className="w-14 h-14" src={museum} alt="" />
@@ -56,7 +56,7 @@ const ServicesCards = () => {
           MUSEUM.AI.IO
         </p>
       </div>
-      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between border-t border-b border-[#7a7a7a] pl-5 pr-5 sm:pl-0 sm:pr-0 pt-5 pb-5">
+      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between border-t border-b border-[#7a7a7a] pl-8 pr-8 sm:pl-0 sm:pr-0 pt-5 pb-5">
         <HiArrowUpRight className="text-white w-8 h-7 ml-auto " />
         <div>
           <img className="w-14 h-14" src={lost} alt="" />
@@ -70,7 +70,7 @@ const ServicesCards = () => {
           LOSTANDFOUND.IN
         </p>
       </div>
-      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between  border-b border-[#7a7a7a] pl-5 pr-5 sm:pl-0 sm:pr-0  pt-5 pb-5">
+      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between  border-b border-[#7a7a7a] pl-8 pr-8 sm:pl-0 sm:pr-0  pt-5 pb-5">
         <HiArrowUpRight className="text-white w-8 h-7 ml-auto " />
         <div>
           <img className="w-14 h-14" src={advisory} alt="" />
@@ -84,7 +84,7 @@ const ServicesCards = () => {
           ADVISORY.AI
         </p>
       </div>
-      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between  border-b border-[#7a7a7a] pl-5 pr-5 sm:pl-0 sm:pr-0  pt-5 pb-5">
+      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between  border-b border-[#7a7a7a] pl-8 pr-8 sm:pl-0 sm:pr-0  pt-5 pb-5">
         <HiArrowUpRight className="text-white w-8 h-7 ml-auto " />
         <div>
           <img className="w-14 h-14" src={tickets} alt="" />
@@ -98,7 +98,7 @@ const ServicesCards = () => {
           TICKET.IN
         </p>
       </div>
-      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between  border-b border-[#7a7a7a] pl-5 pr-5 sm:pl-0 sm:pr-0 pt-5 pb-5">
+      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between  border-b border-[#7a7a7a] pl-8 pr-8 sm:pl-0 sm:pr-0 pt-5 pb-5">
         <HiArrowUpRight className="text-white w-8 h-7 ml-auto " />
         <div>
           <img className="w-14 h-14" src={lastmile} alt="" />
@@ -114,7 +114,7 @@ const ServicesCards = () => {
           LASTMILE.COM
         </p>
       </div>
-      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between  border-b border-[#7a7a7a] pl-5 pr-5 sm:pl-0 sm:pr-0  pt-5 pb-5">
+      <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between  border-b border-[#7a7a7a] pl-8 pr-8 sm:pl-0 sm:pr-0  pt-5 pb-5">
         <HiArrowUpRight className="text-white w-8 h-7 ml-auto " />
         <div className="flex justify-between">
           <img className="w-14 h-14" src={carbonlite} alt="" />

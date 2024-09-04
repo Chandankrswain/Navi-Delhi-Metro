@@ -1,4 +1,4 @@
-import { HiArrowUpRight, HiLink, HiViewColumns } from "react-icons/hi2";
+import { HiArrowUpRight} from "react-icons/hi2";
 
 const MetroCards = () => {
   return (
