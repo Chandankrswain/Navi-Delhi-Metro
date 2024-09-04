@@ -5,7 +5,7 @@ const Disclaimer = () => {
         <p className=" text-white text-[1.5rem] sm:text-[2rem] font-medium mb-6  ">
           Disclaimer
         </p>
-        <div className="border-t border-b border-[#7a7a7a] pt-6 pb-6 ">
+        <div className="border-t border-b border-[#7a7a7a] pt-6 pb-6  ">
           <p className="text-[#c9c9c9] sm:text-md font-semibold sm:animate-marquee sm:whitespace-nowrap text-justify">
             The information provided in DMRC's website i.e. train timings,
             runtime, station facilities etc. is indicative and subject to
