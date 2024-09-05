@@ -40,7 +40,7 @@ const Footer = () => {
             </button>
           </div>
 
-          <div className=" flex flex-col justify-evenly sm:p-6 mb-6">
+          <div className=" flex flex-col justify-evenly sm:p-6 mb-7">
             <div>
               <p className="text-20 sm:text-[30px] font-extrabold">
                 DMRC HELPLINE NO.
