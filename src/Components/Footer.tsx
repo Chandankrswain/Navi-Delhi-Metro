@@ -1,7 +1,72 @@
-import React from "react";
+import logo from "../images/logo.png";
+import delhimetro from "../images/delhi-metro.png";
+import { HiArrowUpRight, HiOutlinePhone } from "react-icons/hi2";
 
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <div className="flex w-full justify-center bg-black sm:h-[550px] ">
+      <div className="flex flex-col sm:flex-row w-9/12 ">
+        <div className="flex mt-[3rem] items-start sm:w-[30%]">
+          <img src={logo} className="w-12 h-10 sm:w-36 sm:h-32" alt="" />
+          <img
+            src={delhimetro}
+            className="w-24 h-14 sm:w-52 sm:h-36 sm:mt-0"
+            alt=""
+          />
+        </div>
+
+        <div className="flex flex-col sm:flex-row w-full sm:w-[70%] text-white sm:p-6 sm:ml-10 justify-between ">
+          <div className=" flex flex-col sm:w-[40%] h-full">
+            <p className="text-3xl sm:text-4xl font-semibold mt-10 mb-9">
+              QUICK LINKS
+            </p>
+            <ul className="mb-6">
+              <li className="border-t border-[#747474] text-[#c9c9c9] text-sm pt-4 mb-2">
+                MISCELLANEOUS{" "}
+              </li>
+              <li className="mb-2 text-sm text-[#c9c9c9]">
+                EVACUATION GUIDELINES
+              </li>
+              <li className="mb-2 text-sm text-[#c9c9c9]">FAQ's</li>
+              <li className="mb-2 text-sm text-[#c9c9c9]">SECURITY</li>
+              <li className="mb-2 text-sm text-[#c9c9c9]">HELP & CONTACT</li>
+              <li className="mb-2 text-sm text-[#c9c9c9]">DISCLAIMER</li>
+              <li className="mb-2 text-sm text-[#c9c9c9]">PRIVACY POLICY</li>
+            </ul>
+
+            <button className=" flex font-['Share_Tech_Mono'] text-md border p-4 w-full items-center justify-center mb-8">
+              HELP AND CONTACT
+              <HiArrowUpRight className="w-5 h-5 sm:w-6 sm:h-6 ml-4 " />
+            </button>
+          </div>
+
+          <div className=" flex flex-col justify-evenly sm:p-6 mb-6">
+            <div>
+              <p className="text-20 sm:text-[30px] font-extrabold">
+                DMRC HELPLINE NO.
+              </p>
+              <div className="flex items-center justify-start">
+                <HiOutlinePhone className="w-5 h-5 sm:w-7 sm:h-7 mr-2 sm:mt-1" />
+                <p className="text-[30px] sm:text-[40px] font-bold">155370</p>
+              </div>
+              <p className=" text-[#c9c9c9] text-[11px] sm:text-sm mb-5">
+                * This call is chargeable as per calling party pay basis
+              </p>
+            </div>
+            <div className="flex flex-col ">
+              <p className="text-20 sm:text-[30px] font-extrabold">
+                CISF HELPLINE NO.
+              </p>
+              <div className="flex items-center justify-start">
+                <HiOutlinePhone className="w-5 h-5 sm:w-7 sm:h-7 mr-2 sm:mt-1" />
+                <p className="text-[30px] sm:text-[40px] font-bold">155655</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Footer;
