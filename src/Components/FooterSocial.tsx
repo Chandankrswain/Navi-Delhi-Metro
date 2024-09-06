@@ -12,7 +12,7 @@ const FooterSocial = () => {
           <p>2024.All rights are reserved</p>
         </div>
 
-        <div className="flex text-white justify-between w-[120px] items-center text-[14px] sm:text-[16px] mb-2 sm:mb-0">
+        <div className="flex text-white justify-between w-[120px] items-center text-[15px] sm:text-[16px] mb-2 sm:mb-0">
           <p>Privacy</p>
           <p>Terms</p>
         </div>
