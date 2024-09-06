@@ -2,6 +2,7 @@ import Banner from "./Components/Banner";
 import CardGroup from "./Components/CardGroup";
 import Disclaimer from "./Components/Disclaimer";
 import Footer from "./Components/Footer";
+import FooterSocial from "./Components/FooterSocial";
 import KnowYourStation from "./Components/KnowYourStation";
 import MetroCards from "./Components/MetroCards";
 import Navbar from "./Components/Navbar";
@@ -41,6 +42,7 @@ const App = () => {
       </div>
       <Disclaimer />
       <Footer />
+      <FooterSocial />
     </>
   );
 };
