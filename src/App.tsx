@@ -23,7 +23,7 @@ const App = () => {
       <div className="flex w-full justify-center items-center mb-[14rem]">
         <div className="sm:flex sm:w-9/12">
           <KnowYourStation />
-          <CardGroup />
+          <CardGroup bannerData={bannerTextData} />
         </div>
       </div>
       <div className="flex w-full justify-center items-center mb-[11rem]">
