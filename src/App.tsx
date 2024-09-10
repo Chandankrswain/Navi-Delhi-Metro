@@ -9,10 +9,12 @@ import Navbar from "./Components/Navbar";
 import NoticesAlerts from "./Components/NoticesAlerts";
 import ServicesCards from "./Components/ServicesCards";
 
-const bannerTextData = {
-  number: "393",
-  description: "TOTAL NETWORK LENGTH  ",
-};
+const bannerTextData = [
+  { number: "393", description: "TOTAL NETWORK LENGTH  " },
+  { number: "393", description: "TOTAL NETWORK LENGTH  " },
+  { number: "393", description: "TOTAL NETWORK LENGTH  " },
+  { number: "393", description: "TOTAL NETWORK LENGTH  " },
+];
 
 const App = () => {
   return (
