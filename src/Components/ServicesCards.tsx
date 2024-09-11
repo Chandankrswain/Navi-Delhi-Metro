@@ -7,7 +7,7 @@ const ServicesCards = ({ servicesData }: any) => {
         <HiArrowUpRight className="text-white w-8 h-7 ml-auto " />
         <div className="flex justify-between">
           <img className="w-14 h-14" src={data.image} alt="" />
-          {data.id === 0 && data.id === 8 && (
+          {(data.id === 0 || data.id === 7) && (
             <button className="text-white text-[11px] bg-black w-11 h-6 mr-4">
               {data.id === 0 ? "NOTE" : "NEW"}
             </button>

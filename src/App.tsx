@@ -18,7 +18,7 @@ const bannerTextData = [
 
 const ourServicesData = [
   {
-    id: "0",
+    id: 0,
     image: "/src/images/dollar.png",
     title: "Fare Calculator",
     description:
@@ -26,7 +26,7 @@ const ourServicesData = [
     link: "FARECAL.AI",
   },
   {
-    id: "1",
+    id: 1,
     image: "/src/images/guide.png",
     title: "Tour Guide",
     description:
@@ -34,7 +34,7 @@ const ourServicesData = [
     link: "TOURGUIDE.COM ",
   },
   {
-    id: "2",
+    id: 2,
     image: "/src/images/museum.png",
     title: "Metro Museumr",
     description:
@@ -43,7 +43,7 @@ const ourServicesData = [
   },
 
   {
-    id: "4",
+    id: 3,
     image: "/src/images/lostfound.png",
     title: "Lost and Found",
     description:
@@ -51,7 +51,7 @@ const ourServicesData = [
     link: "LOSTANDFOUND.IN",
   },
   {
-    id: "5",
+    id: 4,
     image: "/src/images/advisory.png",
     title: "Travel Advisory",
     description:
@@ -59,7 +59,7 @@ const ourServicesData = [
     link: "ADVISORY.AI",
   },
   {
-    id: "6",
+    id: 5,
     image: "/src/images/tickets.png",
     title: "Tickets",
     description:
@@ -67,7 +67,7 @@ const ourServicesData = [
     link: "TICKET.IN",
   },
   {
-    id: "7",
+    id: 6,
     image: "/src/images/lastmile.png",
     title: "Last Mile Connectivity",
     description:
@@ -75,7 +75,7 @@ const ourServicesData = [
     link: "LASTMILE.COM",
   },
   {
-    id: "8",
+    id: 7,
     image: "/src/images/eco.png",
     title: "CarbonLite Metro Travel",
     description:
@@ -83,6 +83,8 @@ const ourServicesData = [
     link: "CARBON.LITE.IO",
   },
 ];
+
+
 
 const App = () => {
   return (
