@@ -16,6 +16,74 @@ const bannerTextData = [
   { number: "2002", description: "YEAR FOUNDED" },
 ];
 
+const ourServicesData = [
+  {
+    id: "0",
+    image: "/src/images/dollar.png",
+    title: "Fare Calculator",
+    description:
+      "  The Fare Calculator is a quick and easy tool to help you estimate your travel costs.",
+    link: "FARECAL.AI",
+  },
+  {
+    id: "1",
+    image: "/src/images/guide.png",
+    title: "Tour Guide",
+    description:
+      "   A Tour Guide offers a personalized and informative experience, helping you explore new places with ease.",
+    link: "TOURGUIDE.COM ",
+  },
+  {
+    id: "2",
+    image: "/src/images/museum.png",
+    title: "Metro Museumr",
+    description:
+      " The Metro Museum offers a fascinating glimpse into the history and evolution of urban transit.",
+    link: "MUSEUM.AI.IO",
+  },
+
+  {
+    id: "4",
+    image: "/src/images/lostfound.png",
+    title: "Lost and Found",
+    description:
+      " The Metro Lost and Found service is dedicated to reuniting passengers with their lost belongings.",
+    link: "LOSTANDFOUND.IN",
+  },
+  {
+    id: "5",
+    image: "/src/images/advisory.png",
+    title: "Travel Advisory",
+    description:
+      "  A Travel Advisory provides essential information to ensure a safe and smooth journey.",
+    link: "ADVISORY.AI",
+  },
+  {
+    id: "6",
+    image: "/src/images/tickets.png",
+    title: "Tickets",
+    description:
+      "Metro tickets are your gateway to a convenient and efficient transit experience.",
+    link: "TICKET.IN",
+  },
+  {
+    id: "7",
+    image: "/src/images/lastmile.png",
+    title: "Last Mile Connectivity",
+    description:
+      "Last Mile Connectivity bridges metro stations to your destination with ease.",
+    link: "LASTMILE.COM",
+  },
+  {
+    id: "8",
+    image: "/src/images/eco.png",
+    title: "CarbonLite Metro Travel",
+    description:
+      "CarbonLite Metro Travel promotes eco-friendly transit by reducing carbon emissions through energy-efficient metro systems.",
+    link: "CARBON.LITE.IO",
+  },
+];
+
 const App = () => {
   return (
     <>
@@ -33,7 +101,7 @@ const App = () => {
           <p className="text-white text-[35px] sm:text-[96px] font-extrabold leading-none mb-20">
             OUR SERVICES.
           </p>
-          <ServicesCards />
+          <ServicesCards servicesData={ourServicesData} />
         </div>
       </div>
       <div className=" flex w-full  justify-center items-center mb-16">
