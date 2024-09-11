@@ -11,9 +11,9 @@ import ServicesCards from "./Components/ServicesCards";
 
 const bannerTextData = [
   { number: "393", description: "TOTAL NETWORK LENGTH  " },
-  { number: "393", description: "TOTAL NETWORK LENGTH  " },
-  { number: "393", description: "TOTAL NETWORK LENGTH  " },
-  { number: "393", description: "TOTAL NETWORK LENGTH  " },
+  { number: "12", description: "TOTAL NUMBER OF LINES" },
+  { number: "288", description: "TOTAL NUMBER OF STATIONS  " },
+  { number: "2002", description: "YEAR FOUNDED" },
 ];
 
 const App = () => {
