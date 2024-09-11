@@ -84,7 +84,68 @@ const ourServicesData = [
   },
 ];
 
-
+const cardTextData = [
+  {
+    backgroundImage: "../src/images/red.png",
+    line: "LINE 1",
+    colour: "Red Line",
+  },
+  {
+    backgroundImage: "../src/images/yellow.png",
+    line: "LINE 2",
+    colour: "Yellow Line",
+  },
+  {
+    backgroundImage: "../src/images/blue.png",
+    line: "LINE 3",
+    colour: "Blue Line 1",
+  },
+  {
+    backgroundImage: "../src/images/blue.png",
+    line: "LINE 4",
+    colour: "Blue Line 2",
+  },
+  {
+    backgroundImage: "../src/images/green.png",
+    line: "LINE 5",
+    colour: "Green Line 1",
+  },
+  {
+    backgroundImage: "../src/images/green.png",
+    line: "LINE 6",
+    colour: "Green Line 2",
+  },
+  {
+    backgroundImage: "../src/images/voilet.png",
+    line: "LINE 7",
+    colour: "Voilet Line",
+  },
+  {
+    backgroundImage: "../src/images/pink.png",
+    line: "LINE 8",
+    colour: "Pink Line",
+  },
+  {
+    backgroundImage: "../src/images/magenta.png",
+    line: "LINE 9",
+    colour: "Magenta Line",
+  },
+  {
+    backgroundImage: "../src/images/grey.png",
+    line: "LINE 10",
+    colour: "Grey Line",
+  },
+  {
+    backgroundImage: "../src/images/orange.png",
+    line: "LINE 11",
+    colour: "Orange Line",
+  },
+  {
+    backgroundImage: "../src/images/rapid.png",
+    line: "LINE 12",
+    colour: "Rapid Metro RMGL",
+  },
+];
 
 const App = () => {
   return (
@@ -114,7 +175,7 @@ const App = () => {
           <p className="text-white text-[40px] sm:text-[96px] font-extrabold leading-none mb-20">
             METRO LINES.
           </p>
-          <MetroCards />
+          <MetroCards cardData={cardTextData} />
         </div>
       </div>
       <Disclaimer />
