@@ -26,7 +26,14 @@ const ourServicesData = [
       "  The Fare Calculator is a quick and easy tool to help you estimate your travel costs.",
     link: "FARECAL.AI",
   },
-
+  {
+    id: 1,
+    image: "/src/images/guide.png",
+    title: "Tour Guide",
+    description:
+      "   A Tour Guide offers a personalized and informative experience, helping you explore new places with ease.",
+    link: "TOURGUIDE.COM ",
+  },
   {
     id: 2,
     image: "/src/images/museum.png",
