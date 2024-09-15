@@ -19,7 +19,7 @@ const bannerTextData = [
 const ourServicesData = [
   {
     id: 0,
-    image: "/public/images/dollar.png",
+    image: "/src/images/dollar.png",
     title: "Fare Calculator",
     description:
       "  The Fare Calculator is a quick and easy tool to help you estimate your travel costs.",
@@ -27,7 +27,7 @@ const ourServicesData = [
   },
   {
     id: 1,
-    image: "/public/images/guide.png",
+    image: "/src/images/guide.png",
     title: "Tour Guide",
     description:
       "   A Tour Guide offers a personalized and informative experience, helping you explore new places with ease.",
@@ -35,7 +35,7 @@ const ourServicesData = [
   },
   {
     id: 2,
-    image: "/public/images/museum.png",
+    image: "/src/images/museum.png",
     title: "Metro Museumr",
     description:
       " The Metro Museum offers a fascinating glimpse into the history and evolution of urban transit.",
@@ -44,7 +44,7 @@ const ourServicesData = [
 
   {
     id: 3,
-    image: "/public/images/lostfound.png",
+    image: "/src/images/lostfound.png",
     title: "Lost and Found",
     description:
       " The Metro Lost and Found service is dedicated to reuniting passengers with their lost belongings.",
@@ -52,7 +52,7 @@ const ourServicesData = [
   },
   {
     id: 4,
-    image: "/public/images/advisory.png",
+    image: "/src/images/advisory.png",
     title: "Travel Advisory",
     description:
       "  A Travel Advisory provides essential information to ensure a safe and smooth journey.",
@@ -60,7 +60,7 @@ const ourServicesData = [
   },
   {
     id: 5,
-    image: "/public//images/tickets.png",
+    image: "/src/images/tickets.png",
     title: "Tickets",
     description:
       "Metro tickets are your gateway to a convenient and efficient transit experience.",
@@ -68,7 +68,7 @@ const ourServicesData = [
   },
   {
     id: 6,
-    image: "/public/images/lastmile.png",
+    image: "/src/images/lastmile.png",
     title: "Last Mile Connectivity",
     description:
       "Last Mile Connectivity bridges metro stations to your destination with ease.",
@@ -76,7 +76,7 @@ const ourServicesData = [
   },
   {
     id: 7,
-    image: "/public/images/eco.png",
+    image: "/src/images/eco.png",
     title: "CarbonLite Metro Travel",
     description:
       "CarbonLite Metro Travel promotes eco-friendly transit by reducing carbon emissions through energy-efficient metro systems.",
