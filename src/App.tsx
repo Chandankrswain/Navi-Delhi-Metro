@@ -8,7 +8,7 @@ import MetroCards from "./Components/MetroCards";
 import Navbar from "./Components/Navbar";
 import NoticesAlerts from "./Components/NoticesAlerts";
 import ServicesCards from "./Components/ServicesCards";
-import dollar from "/src/images/dollar.png";
+import dollar from "../public/images/dollar.png";
 
 const bannerTextData = [
   { number: "393", description: "TOTAL NETWORK LENGTH  " },
