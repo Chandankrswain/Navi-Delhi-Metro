@@ -8,6 +8,7 @@ import MetroCards from "./Components/MetroCards";
 import Navbar from "./Components/Navbar";
 import NoticesAlerts from "./Components/NoticesAlerts";
 import ServicesCards from "./Components/ServicesCards";
+import dollar from "/src/images/dollar.png";
 
 const bannerTextData = [
   { number: "393", description: "TOTAL NETWORK LENGTH  " },
@@ -19,7 +20,7 @@ const bannerTextData = [
 const ourServicesData = [
   {
     id: 0,
-    image: "/src/images/dollar.png",
+    image: { dollar },
     title: "Fare Calculator",
     description:
       "  The Fare Calculator is a quick and easy tool to help you estimate your travel costs.",
