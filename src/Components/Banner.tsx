@@ -1,7 +1,6 @@
 import BannerCard from "./BannerCard";
 import BannerText from "./BannerText";
 import Metro from "../images/metro-Banner.png";
-import NoticesAlerts from "./NoticesAlerts";
 
 const Banner = () => {
   return (
