@@ -8,7 +8,6 @@ import MetroCards from "./Components/MetroCards";
 import Navbar from "./Components/Navbar";
 import NoticesAlerts from "./Components/NoticesAlerts";
 import ServicesCards from "./Components/ServicesCards";
-import dollar from "../public/images/dollar.png";
 
 const bannerTextData = [
   { number: "393", description: "TOTAL NETWORK LENGTH  " },
@@ -20,48 +19,47 @@ const bannerTextData = [
 const ourServicesData = [
   {
     id: 0,
-    image: { dollar },
+    image: "/images/dollar.png",
     title: "Fare Calculator",
     description:
-      "  The Fare Calculator is a quick and easy tool to help you estimate your travel costs.",
+      "The Fare Calculator is a quick and easy tool to help you estimate your travel costs.",
     link: "FARECAL.AI",
   },
   {
     id: 1,
-    image: "/src/images/guide.png",
+    image: "/images/guide.png",
     title: "Tour Guide",
     description:
-      "   A Tour Guide offers a personalized and informative experience, helping you explore new places with ease.",
-    link: "TOURGUIDE.COM ",
+      "A Tour Guide offers a personalized and informative experience, helping you explore new places with ease.",
+    link: "TOURGUIDE.COM",
   },
   {
     id: 2,
-    image: "/src/images/museum.png",
-    title: "Metro Museumr",
+    image: "/images/museum.png",
+    title: "Metro Museum",
     description:
-      " The Metro Museum offers a fascinating glimpse into the history and evolution of urban transit.",
+      "The Metro Museum offers a fascinating glimpse into the history and evolution of urban transit.",
     link: "MUSEUM.AI.IO",
   },
-
   {
     id: 3,
-    image: "/src/images/lostfound.png",
+    image: "/images/lostfound.png",
     title: "Lost and Found",
     description:
-      " The Metro Lost and Found service is dedicated to reuniting passengers with their lost belongings.",
+      "The Metro Lost and Found service is dedicated to reuniting passengers with their lost belongings.",
     link: "LOSTANDFOUND.IN",
   },
   {
     id: 4,
-    image: "/src/images/advisory.png",
+    image: "/images/advisory.png",
     title: "Travel Advisory",
     description:
-      "  A Travel Advisory provides essential information to ensure a safe and smooth journey.",
+      "A Travel Advisory provides essential information to ensure a safe and smooth journey.",
     link: "ADVISORY.AI",
   },
   {
     id: 5,
-    image: "/src/images/tickets.png",
+    image: "/images/tickets.png",
     title: "Tickets",
     description:
       "Metro tickets are your gateway to a convenient and efficient transit experience.",
@@ -69,7 +67,7 @@ const ourServicesData = [
   },
   {
     id: 6,
-    image: "/src/images/lastmile.png",
+    image: "/images/lastmile.png",
     title: "Last Mile Connectivity",
     description:
       "Last Mile Connectivity bridges metro stations to your destination with ease.",
@@ -77,7 +75,7 @@ const ourServicesData = [
   },
   {
     id: 7,
-    image: "/src/images/eco.png",
+    image: "/images/eco.png",
     title: "CarbonLite Metro Travel",
     description:
       "CarbonLite Metro Travel promotes eco-friendly transit by reducing carbon emissions through energy-efficient metro systems.",
@@ -87,62 +85,62 @@ const ourServicesData = [
 
 const cardTextData = [
   {
-    backgroundImage: "../src/images/red.png",
+    backgroundImage: "/images/red.png",
     line: "LINE 1",
     colour: "Red Line",
   },
   {
-    backgroundImage: "../src/images/yellow.png",
+    backgroundImage: "/images/yellow.png",
     line: "LINE 2",
     colour: "Yellow Line",
   },
   {
-    backgroundImage: "../src/images/blue.png",
+    backgroundImage: "/images/blue.png",
     line: "LINE 3",
     colour: "Blue Line 1",
   },
   {
-    backgroundImage: "../src/images/blue.png",
+    backgroundImage: "/images/blue.png",
     line: "LINE 4",
     colour: "Blue Line 2",
   },
   {
-    backgroundImage: "../src/images/green.png",
+    backgroundImage: "/images/green.png",
     line: "LINE 5",
     colour: "Green Line 1",
   },
   {
-    backgroundImage: "../src/images/green.png",
+    backgroundImage: "/images/green.png",
     line: "LINE 6",
     colour: "Green Line 2",
   },
   {
-    backgroundImage: "../src/images/voilet.png",
+    backgroundImage: "/images/voilet.png",
     line: "LINE 7",
-    colour: "Voilet Line",
+    colour: "Violet Line",
   },
   {
-    backgroundImage: "../src/images/pink.png",
+    backgroundImage: "/images/pink.png",
     line: "LINE 8",
     colour: "Pink Line",
   },
   {
-    backgroundImage: "../src/images/magenta.png",
+    backgroundImage: "/images/magenta.png",
     line: "LINE 9",
     colour: "Magenta Line",
   },
   {
-    backgroundImage: "../src/images/grey.png",
+    backgroundImage: "/images/grey.png",
     line: "LINE 10",
     colour: "Grey Line",
   },
   {
-    backgroundImage: "../src/images/orange.png",
+    backgroundImage: "/images/orange.png",
     line: "LINE 11",
     colour: "Orange Line",
   },
   {
-    backgroundImage: "../src/images/rapid.png",
+    backgroundImage: "/images/rapid.png",
     line: "LINE 12",
     colour: "Rapid Metro RMGL",
   },

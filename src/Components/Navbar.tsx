@@ -1,5 +1,5 @@
-import logo from "../images/logo.png";
-import delhimetro from "../images/delhi-metro.png";
+import logo from "../../public/images/logo.png";
+import delhimetro from "../../public/images/delhi-metro.png";
 import { HiArrowUpRight } from "react-icons/hi2";
 
 const Navbar = () => {
