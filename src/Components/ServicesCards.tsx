@@ -19,6 +19,7 @@ const ServicesCards = ({ servicesData }: any) => {
         </p>
         <p className="text-[#00ffff] text-[14px] font-['Share_Tech_Mono'] tracking-widest">
           {data.link}
+          <></>
         </p>
       </div>
     );
