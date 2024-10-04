@@ -5,7 +5,14 @@ import {
   HiOutlineMap,
 } from "react-icons/hi2";
 
-const BannerCard = () => {
+interface Props {
+  search: Function;
+  stations: Record<string, any>[];
+  setStations: Function;
+}
+
+const BannerCard = ({ search, stations, setStations }: Props) => {
+  console.log(stations);
   return (
     <div>
       <div className="sm:w-[500px] text-white flex flex-col justify-evenly min-w-[342px] mt-3">
@@ -18,6 +25,9 @@ const BannerCard = () => {
           <input
             className="border border-white bg-transparent w-full h-[60px] border-1 p-4 text-lg mt-4 "
             placeholder="Enter the Departure Station"
+            name="fromStation"
+            onChange={(e) => search(e)}
+            onFocus={() => setStations([])}
           ></input>
         </div>
         <div className="flex items-center justify-between mt-5">
@@ -28,6 +38,9 @@ const BannerCard = () => {
           <input
             className="border border-white bg-transparent w-full h-[60px] rounded-0 border-1 p-4 text-lg mt-4 "
             placeholder="Enter the Arrival Station"
+            name="toStation"
+            onChange={(e) => search(e)}
+            onFocus={() => setStations([])}
           ></input>
         </div>
         <p className="text-xl font-bold mt-4">Advanced Filter</p>
