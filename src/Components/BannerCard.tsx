@@ -126,7 +126,7 @@ const BannerCard = ({ search, stations, setStations }: Props) => {
               <HiOutlineMap className="w-10 h-10" />
               <HiArrowUpRight className="ml-auto w-5 h-5 sm:w-6 sm:h-6 " />
             </div>
-            <p className="text-md font-thin">u5</p>
+            <p className="text-md font-thin">Minimum Interchange</p>
           </div>
         </div>
       </div>
