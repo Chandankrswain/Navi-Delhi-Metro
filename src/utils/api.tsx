@@ -16,10 +16,4 @@ export class StationData {
     );
     return result?.data || [];
   }
-  async getStations(keyword: string) {
-    const result = await this.client.get(
-      GET_STATIONS.replace(":STATION_NAME", keyword)
-    );
-    return result?.data || [];
-  }
 }

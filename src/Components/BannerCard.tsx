@@ -134,6 +134,7 @@ const BannerCard = ({ search, stations, setStations }: Props) => {
         SHOW ROUTE AND FARE
         <HiArrowUpRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-4 mr-2 " />
       </button>
+      
     </div>
   );
 };

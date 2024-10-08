@@ -7,7 +7,7 @@ import { StationData } from "../utils/api";
 const Banner = () => {
   const [stations, setStations] = useState([]);
   const stationData = new StationData();
-  async function searchStations(e) {
+  async function searchStations(e: any) {
     if (e.target.value) {
       const result = await stationData.searchStations(e.target.value);
       setStations(result);
