@@ -1,7 +1,6 @@
 import apiClient from "../services/axios";
 import {
   SEARCH_STATIONS,
-  GET_STATIONS,
 } from "../services/constants/apiEndPoints";
 
 export class StationData {

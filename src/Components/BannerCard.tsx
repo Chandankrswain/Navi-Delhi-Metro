@@ -1,3 +1,4 @@
+import { log } from "console";
 import React, { useCallback, useState } from "react";
 import {
   HiArrowUpRight,
@@ -12,34 +13,60 @@ interface Props {
   setStations: Function; // Function to update the stations state
 }
 
+interface DataState {
+  fromSearchField?: string;
+  toSearchField?: string;
+  focusField?: string;
+}
+
 const BannerCard = ({ search, stations, setStations }: Props) => {
-  const [focusedField, setFocusedField] = useState(""); // Track which field is focused
-  const [valueField, setValueField] = useState({ from: "", to: "" }); // Track input values for both fields
-  // Handle input changes for both fields
-  const inputHandler = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      const { name, value } = e.target;
+  const [dataField, setDataField] = useState<DataState>({
+    fromSearchField: "",
+    toSearchField: "",
+    focusField: "",
+  });
 
-      if (value === "") {
-        setStations([]); // Clear stations if input is empty
-        setValueField((prev) => ({ ...prev, [name]: value })); // Clear the corresponding input
-      } else {
-        console.log("Input Value:", value); // Log the value
-        search(e); // Call the search function
-        setValueField((prev) => ({ ...prev, [name]: value })); // Update the corresponding input value
+  console.log(dataField);
+
+  const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value }: { name: string; value: any } = e.target;
+
+    if (value === "") {
+      setStations([]); // Clear stations if input is empty
+      setDataField((prev) => ({ ...prev, [name]: value })); // Clear the corresponding input
+    } else {
+      setDataField((prev) => ({ ...prev, [name]: value })); // Update the corresponding input value
+    }
+
+    if (["fromSearchField", "toSearchField"].includes(name)) {
+      if (dataField.focusField === "from") {
+        setDataField((prev) => ({
+          ...prev,
+          fromStation: undefined,
+        }));
+      } else if (dataField.focusField === "to") {
+        setDataField((prev) => ({
+          ...prev,
+          toStation: undefined,
+        }));
       }
-    },
-    [search]
-  );
+      search(value);
+    }
 
-  // Handle click on suggestion item
-  const handleClick = (station: any) => {
-    console.log("Station Selected:", station); // Log selected station
-    setStations([]); // Clear the suggestions
-    setValueField((prev) => ({
-      ...prev,
-      [focusedField]: station.station_name,
-    })); // Set selected station to the corresponding input field
+    if (name == "fromStation") {
+      setDataField((prev) => ({
+        ...prev,
+        fromSearchField: value.station_name,
+      }));
+      setStations([]);
+    }
+    if (name == "toStation") {
+      setDataField((prev) => ({
+        ...prev,
+        toSearchField: value.station_name,
+      }));
+      setStations([]);
+    }
   };
 
   return (
@@ -55,22 +82,28 @@ const BannerCard = ({ search, stations, setStations }: Props) => {
           <input
             className="border border-white bg-transparent w-full h-[60px] border-1 p-4 text-lg mt-4"
             placeholder="Enter the Departure Station"
-            name="from" // Set name to distinguish
-            value={valueField.from}
+            name="fromSearchField" // Set name to distinguish
+            value={dataField?.fromSearchField}
             onChange={inputHandler}
             onFocus={() => {
-              setFocusedField("from"); // Set focused field to 'from'
-              setStations([]); // Clear previous stations
+              inputHandler({
+                target: { name: "focusField", value: "from" },
+              } as any);
+              setStations([]);
             }}
           />
           {/* Show suggestions only when 'from' input is focused */}
-          {focusedField === "from" && stations.length > 0 && (
+          {dataField?.focusField === "from" && stations?.length > 0 && (
             <ul className="bg-gray-900 w-full mt-20 absolute z-10">
               {stations.map((data: any) => (
                 <li
                   className="cursor-pointer p-2 hover:bg-gray-700"
                   key={data.id}
-                  onClick={() => handleClick(data)}
+                  onClick={() =>
+                    inputHandler({
+                      target: { name: "fromStation", value: data },
+                    } as any)
+                  }
                 >
                   {data.station_name}
                 </li>
@@ -88,22 +121,28 @@ const BannerCard = ({ search, stations, setStations }: Props) => {
           <input
             className="border border-white bg-transparent w-full h-[60px] rounded-0 border-1 p-4 text-lg mt-4"
             placeholder="Enter the Arrival Station"
-            name="to" // Set name to distinguish
-            value={valueField.to}
+            name="toSearchField" // Set name to distinguish
+            value={dataField.toSearchField}
             onChange={inputHandler}
             onFocus={() => {
-              setFocusedField("to"); // Set focused field to 'to'
-              setStations([]); // Clear previous stations
+              inputHandler({
+                target: { name: "focusField", value: "to" },
+              } as any);
+              setStations([]);
             }}
           />
           {/* Show suggestions only when 'to' input is focused */}
-          {focusedField === "to" && stations.length > 0 && (
+          {dataField?.focusField === "to" && stations.length > 0 && (
             <ul className="bg-gray-900 w-full mt-20 absolute z-10">
               {stations.map((data: any) => (
                 <li
                   className="cursor-pointer p-2 hover:bg-gray-700"
                   key={data.id}
-                  onClick={() => handleClick(data)}
+                  onClick={() =>
+                    inputHandler({
+                      target: { name: "toStation", value: data },
+                    } as any)
+                  }
                 >
                   {data.station_name}
                 </li>
@@ -134,7 +173,6 @@ const BannerCard = ({ search, stations, setStations }: Props) => {
         SHOW ROUTE AND FARE
         <HiArrowUpRight className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-4 mr-2 " />
       </button>
-      
     </div>
   );
 };
