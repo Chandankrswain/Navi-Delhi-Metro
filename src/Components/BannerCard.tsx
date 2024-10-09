@@ -1,5 +1,4 @@
-import { log } from "console";
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import {
   HiArrowUpRight,
   HiOutlineArrowsUpDown,

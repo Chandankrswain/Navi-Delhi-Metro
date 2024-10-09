@@ -3,9 +3,12 @@ import { HiArrowUpRight } from "react-icons/hi2";
 const ServicesCards = ({ servicesData }: any) => {
   return (
     <div className="flex flex-wrap justify-between">
-      {servicesData.map((data: any) => {
+      {servicesData.map((data: any, index: number) => {
         return (
-          <div className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between  border-t border-b border-[#7a7a7a] pl-8 pr-8 sm:pl-0 sm:pr-0 pt-5 pb-5">
+          <div
+            key={index}
+            className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between  border-t border-b border-[#7a7a7a] pl-8 pr-8 sm:pl-0 sm:pr-0 pt-5 pb-5"
+          >
             <HiArrowUpRight className="text-white w-8 h-7 ml-auto " />
             <div className="flex justify-between">
               <img className="w-14 h-14" src={data.image} alt="" />

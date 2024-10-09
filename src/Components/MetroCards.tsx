@@ -3,9 +3,10 @@ import { HiArrowUpRight } from "react-icons/hi2";
 const MetroCards = ({ cardData }: any) => {
   return (
     <div className="flex flex-wrap justify-evenly">
-      {cardData.map((data: any) => {
+      {cardData.map((data: any, index: number) => {
         return (
           <div
+            key={index}
             style={{
               backgroundImage: `url(${data.backgroundImage})`,
             }}
