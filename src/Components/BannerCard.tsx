@@ -26,10 +26,7 @@ const BannerCard = ({ search, stations, setStations }: Props) => {
     focusField: "",
   });
   const getShortestRoute = async () => {
-    const fromStation = dataField.fromSearchField;
-    const toStation = dataField.toSearchField;
-
-    if (!fromStation || !toStation) {
+    if (!dataField.fromSearchField || !dataField.toSearchField) {
       alert("Please enter both From and To stations");
       return;
     }
