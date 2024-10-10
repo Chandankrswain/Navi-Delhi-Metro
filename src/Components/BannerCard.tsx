@@ -19,13 +19,25 @@ interface DataState {
 }
 
 const BannerCard = ({ search, stations, setStations }: Props) => {
+  const [selectedRoute, setSelectedRoute] = useState(false);
   const [dataField, setDataField] = useState<DataState>({
     fromSearchField: "",
     toSearchField: "",
     focusField: "",
   });
+  const getShortestRoute = async () => {
+    const fromStation = dataField.fromSearchField;
+    const toStation = dataField.toSearchField;
 
-  console.log(dataField);
+    if (!fromStation || !toStation) {
+      alert("Please enter both From and To stations");
+      return;
+    }
+
+    setSelectedRoute(true); // Mark the route as selected
+
+    // No API call here yet
+  };
 
   const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value }: { name: string; value: any } = e.target;
@@ -152,7 +164,12 @@ const BannerCard = ({ search, stations, setStations }: Props) => {
 
         <p className="text-xl font-bold mt-4">Advanced Filter</p>
         <div className="flex w-full h-[200px] mt-4 justify-between">
-          <div className="flex flex-col w-full justify-center justify-between items-start bg-[#2a2a2a] border-gray-500 p-4">
+          <div
+            onClick={getShortestRoute}
+            className={`flex flex-col w-full justify-between items-start bg-[#2a2a2a] border-gray-500 p-4 ${
+              selectedRoute ? "border-2 border-gray-300" : ""
+            }`}
+          >
             <div className="flex justify-between items-center w-full">
               <HiOutlineBolt className="w-10 h-10" />
               <HiArrowUpRight className="ml-auto w-5 h-5 sm:w-6 sm:h-6 " />
