@@ -2,8 +2,10 @@ import apiClient from "../services/axios";
 import {
   ALL_LINES,
   LEAST_DISTANCE,
+  MINIMUM_INTERCHANGE,
   SEARCH_STATIONS,
 } from "../services/constants/apiEndPoints";
+import { getISTTime } from "./helper";
 
 export class StationData {
   client: any;
@@ -20,7 +22,7 @@ export class StationData {
 
   async getLines(keyword: string) {
     const result = await this.client.get(
-      ALL_LINES.replace("LINE_CODE", keyword)
+      ALL_LINES.replace(":LINE_CODE", keyword)
     );
     return result?.data || [];
   }
@@ -28,9 +30,25 @@ export class StationData {
   async leastDistance(
     fromStationCode: string,
     toStationCode: string,
-    time: string
+    time: string = getISTTime()
   ) {
     const url = LEAST_DISTANCE.replace(":From_Station_Code", fromStationCode)
+      .replace(":To_Station_Code", toStationCode)
+      .replace(":time", time);
+
+    const result = await this.client.get(url);
+    return result?.data || [];
+  }
+
+  async minimumInterchange(
+    fromStationCode: string,
+    toStationCode: string,
+    time: string = getISTTime()
+  ) {
+    const url = MINIMUM_INTERCHANGE.replace(
+      ":From_Station_Code",
+      fromStationCode
+    )
       .replace(":To_Station_Code", toStationCode)
       .replace(":time", time);
 
