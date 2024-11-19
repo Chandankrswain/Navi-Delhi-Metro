@@ -3,6 +3,7 @@ import {
   ALL_LINES,
   LEAST_DISTANCE,
   MINIMUM_INTERCHANGE,
+  NOTICES,
   SEARCH_STATIONS,
 } from "../services/constants/apiEndPoints";
 import { getISTTime } from "./helper";
@@ -53,6 +54,11 @@ export class StationData {
       .replace(":time", time);
 
     const result = await this.client.get(url);
+    return result?.data || [];
+  }
+
+  async Notices() {
+    const result = await this.client.get(NOTICES);
     return result?.data || [];
   }
 }
