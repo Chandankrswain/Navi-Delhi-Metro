@@ -56,9 +56,17 @@ export class StationData {
     const result = await this.client.get(url);
     return result?.data || [];
   }
+}
 
-  async Notices() {
+export class NotificationData {
+  client: any;
+  constructor() {
+    this.client = apiClient;
+  }
+
+  async getNotices() {
     const result = await this.client.get(NOTICES);
+    console.log(result);
     return result?.data || [];
   }
 }

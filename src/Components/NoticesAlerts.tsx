@@ -1,18 +1,20 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { NOTICES } from "../services/constants/apiEndPoints"; 
+import { NotificationData } from "../utils/api";
 
 const NoticesAlerts = () => {
-  const [noticeData, setNoticeData] = useState<any[]>([]); 
-  const [loading, setLoading] = useState<boolean>(true); 
-  const [error, setError] = useState<string | null>(null); 
+  const [noticeData, setNoticeData] = useState<any[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
+
+  const notificationService = new NotificationData();
 
   useEffect(() => {
     const fetchNotices = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(NOTICES); 
-        setNoticeData(response.data); 
+        const result = await notificationService.getNotices();
+        setNoticeData(result);
       } catch (error: any) {
         setError(error.message);
       } finally {
@@ -20,14 +22,12 @@ const NoticesAlerts = () => {
       }
     };
 
-    fetchNotices(); 
+    fetchNotices();
   }, []);
-
 
   if (loading) {
     return <p>Loading...</p>;
   }
-
 
   if (error) {
     return <p>Error: {error}</p>;
@@ -42,7 +42,7 @@ const NoticesAlerts = () => {
         <div className="border-t border-[#7a7a7a] pt-4 pb-6">
           <div className="flex sm:flex-row flex-col justify-between items-start">
             {/* Map over the fetched data and display title and date */}
-            {noticeData.map((data: any, index: number) => {
+            {noticeData?.slice(0, 3).map((data: any, index: number) => {
               return (
                 <div
                   key={index}

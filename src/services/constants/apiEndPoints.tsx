@@ -5,4 +5,4 @@ export const LEAST_DISTANCE =
   "/v2/en/station_route/:From_Station_Code/:To_Station_Code/least-distance/:time";
 export const MINIMUM_INTERCHANGE =
   "/v2/en/station_route/:From_Station_Code/:To_Station_Code/minimum-interchange/:time";
-export const NOTICES = "/v2/en/passenger/notification";
+export const NOTICES = "/v2/en/passengers/notification";
