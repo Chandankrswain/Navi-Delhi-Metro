@@ -146,27 +146,12 @@ const cardTextData = [
   },
 ];
 
-const noticesTextData = [
-  {
-    date: "28-8-2024",
-    news: "DMRC launches special drive to prevent unlawful entry of male passengers in ladies coaches",
-  },
-  {
-    date: "23-8-2024",
-    news: "Timing for commnecement of sunday services on Phase-III corridors revised",
-  },
-  {
-    date: "21-8-2024",
-    news: "DMRC Completes Major Tunneling Milestone on Phase 4 Golden Line Breakthrough at Chhatarpur Mandir Station",
-  },
-];
-
 const Home = () => {
   return (
     <div>
       <Navbar />
       <Banner />
-      <NoticesAlerts noticeData={noticesTextData} />
+      <NoticesAlerts />
       <div className="flex w-full justify-center items-center mb-[14rem]">
         <div className="sm:flex sm:w-9/12">
           <KnowYourStation />
