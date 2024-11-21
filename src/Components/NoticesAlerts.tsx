@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
 import { NotificationData } from "../utils/api";
 
 const NoticesAlerts = () => {

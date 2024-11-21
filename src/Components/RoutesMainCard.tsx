@@ -3,8 +3,6 @@ import RouteCard from "./RouteCard";
 const RoutesMainCard = ({ data }: { data: any }) => {
   if (!data) return <div>No data available</div>;
 
-  console.log(data);
-
   return (
     <div className="bg-gray-800 text-white p-4 rounded-lg shadow-md">
       <h2 className="text-xl font-bold mb-4">Route Information</h2>

@@ -33,8 +33,6 @@ const BannerCard = ({ search, stations, setStations }: Props) => {
     toStation: undefined,
   });
 
-  console.log(dataField);
-
   const handleFilter = (selectedFilter: any) => {
     if (selectedFilter == FILTER.SHORTEST_ROUTE) {
       setFilter(FILTER.SHORTEST_ROUTE);
@@ -79,6 +77,7 @@ const BannerCard = ({ search, stations, setStations }: Props) => {
   const inputHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value }: { name: string; value: any } = e.target;
 
+    // for handling empty input
     if (value === "") {
       setStations([]); // Clear stations if input is empty
       setDataField((prev) => ({ ...prev, [name]: value })); // Clear the corresponding input
@@ -86,6 +85,7 @@ const BannerCard = ({ search, stations, setStations }: Props) => {
       setDataField((prev) => ({ ...prev, [name]: value })); // Update the corresponding input value
     }
 
+    // when a user toggle between fields
     if (["fromSearchField", "toSearchField"].includes(name)) {
       if (dataField.focusField === "from") {
         setDataField((prev) => ({
@@ -101,6 +101,7 @@ const BannerCard = ({ search, stations, setStations }: Props) => {
       search(value);
     }
 
+    // when a user select the station
     if (name == "fromStation") {
       setDataField((prev) => ({
         ...prev,
