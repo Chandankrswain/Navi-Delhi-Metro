@@ -11,7 +11,7 @@ interface DataState {
   searchStationField: string;
   searchFocusField: string;
   searchStationData?: Record<string, any>[];
-}
+}  
 
 const KnowYourStation = ({ search, stations, setStations }: Props) => {
   const [dataField, setDataField] = useState<DataState>({
