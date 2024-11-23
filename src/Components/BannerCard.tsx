@@ -33,6 +33,8 @@ const BannerCard = ({ search, stations, setStations }: Props) => {
     toStation: undefined,
   });
 
+  
+
   const handleFilter = (selectedFilter: any) => {
     if (selectedFilter == FILTER.SHORTEST_ROUTE) {
       setFilter(FILTER.SHORTEST_ROUTE);
@@ -132,7 +134,7 @@ const BannerCard = ({ search, stations, setStations }: Props) => {
             autoComplete="off"
             className="border border-white bg-transparent w-full h-[60px] border-1 p-4 text-lg mt-4"
             placeholder="Enter the Departure Station"
-            name="fromSearchField" 
+            name="fromSearchField"
             value={dataField?.fromSearchField}
             onChange={inputHandler}
             onFocus={() => {
