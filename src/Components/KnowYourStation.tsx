@@ -1,19 +1,24 @@
 import { useState } from "react";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { StationData } from "../utils/api";
+import { useNavigate } from "react-router-dom";
 
 interface DataState {
   searchStationField: string;
   searchFocusField: string;
-  searchStationData?: Record<string, any>[];
+  searchYourStation?: Record<string, any>;
 }
 
 const KnowYourStation = () => {
+  const navigate = useNavigate();
   const [stations, setStations] = useState([]);
   const [dataField, setDataField] = useState<DataState>({
     searchStationField: "",
     searchFocusField: "",
+    searchYourStation: undefined,
   });
+
+  console.log(dataField);
 
   const search = async (keyword: any) => {
     const stationServices = new StationData();
@@ -44,6 +49,15 @@ const KnowYourStation = () => {
     }
   };
 
+  const handleSubmit = () => {
+    if (!dataField.searchStationField) {
+      alert("Enter your Station Name");
+      return;
+    }
+
+    navigate(`/station-data/${dataField.searchYourStation?.station_code}`);
+  };
+
   return (
     <div className="w-full sm:max-w-[50%] flex flex-col items-start">
       <p className="pl-9 sm:pl-0 text-white text-2xl sm:text-[92px] font-extrabold leading-none mb-4">
@@ -56,6 +70,7 @@ const KnowYourStation = () => {
       </p>
       <div className="flex mt-3 w-full mb-5 pl-12 relative">
         <input
+          autoComplete="off"
           name="searchStationField"
           value={dataField?.searchStationField}
           className="border border-white border-r-0 bg-transparent w-[70%] h-[72px] p-4 text-lg font-thin text-white focus:outline-none focus:border-white"
@@ -85,7 +100,10 @@ const KnowYourStation = () => {
             ))}
           </ul>
         )}
-        <button className="border border-white border-l-0 w-[10%] h-[72px] flex items-center justify-center">
+        <button
+          onClick={handleSubmit}
+          className="border border-white border-l-0 w-[10%] h-[72px] flex items-center justify-center"
+        >
           <HiArrowUpRight className="text-white w-6 h-6" />
         </button>
       </div>
