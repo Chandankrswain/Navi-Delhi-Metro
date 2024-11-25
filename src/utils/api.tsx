@@ -5,6 +5,7 @@ import {
   MINIMUM_INTERCHANGE,
   NOTICES,
   SEARCH_STATIONS,
+  STATION_INFO,
 } from "../services/constants/apiEndPoints";
 import { getISTTime } from "./helper";
 
@@ -54,6 +55,12 @@ export class StationData {
       .replace(":time", time);
 
     const result = await this.client.get(url);
+    return result?.data || [];
+  }
+  async getStationBriefInfo(keyword: string) {
+    const result = await this.client.get(
+      STATION_INFO.replace(":station_code", keyword)
+    );
     return result?.data || [];
   }
 }
