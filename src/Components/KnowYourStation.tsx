@@ -18,8 +18,6 @@ const KnowYourStation = () => {
     searchYourStation: undefined,
   });
 
-  console.log(dataField);
-
   const search = async (keyword: any) => {
     const stationServices = new StationData();
     const result = await stationServices.searchStations(keyword);

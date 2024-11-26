@@ -1,18 +1,17 @@
 import Navbar from "../Components/Navbar";
 import { useEffect, useState } from "react";
 import { StationData } from "../utils/api";
-import NearbyPlacesCard from "../Components/NearbyPlacesCard";
+import StationInfoPageCards from "../Components/StationInfoPageCards";
 
 interface StationInfoType {
   station_name: string;
   id: number;
+  nearby_places: Record<string, any>[];
 }
 
 const StationInfo = () => {
   const [stationData, setStationData] = useState<StationInfoType>();
   const stationInfoData = new StationData();
-
-  console.log(stationData);
 
   const FetchStationDetails = async (value: string) => {
     const result = await stationInfoData.getStationBriefInfo(value);
@@ -27,7 +26,7 @@ const StationInfo = () => {
     <div>
       <Navbar />
       {stationData ? (
-        <NearbyPlacesCard stationDetails={stationData} />
+        <StationInfoPageCards stationDetails={stationData} />
       ) : (
         <p className="text-white">Loading station details...</p>
       )}
