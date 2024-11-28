@@ -1,17 +1,16 @@
-interface StationInfoType {
+interface StationCardType {
   station_name: string;
   id: number;
   nearby_places: Record<string, any>[];
 }
 
 interface Props {
-  stationDetails?: StationInfoType;
+  stationCardData?: StationCardType;
 }
 
-const StationInfoPageCards = ({ stationDetails }: Props) => {
+const StationInfoPageCards = ({ stationCardData }: Props) => {
   const emergencyData =
-    stationDetails?.nearby_places?.[0]?.Emergency?.Hospital?.[1]?.name;
-  console.log(emergencyData);
+    stationCardData?.nearby_places?.[0]?.Emergency?.Hospital?.[1]?.name;
 
   return (
     <div className="text-white">
