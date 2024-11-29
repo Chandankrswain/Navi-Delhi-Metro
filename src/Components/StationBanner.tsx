@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 interface StationBannerType {
   line_id: number;
@@ -14,14 +14,17 @@ interface Props {
 
 const StationBanner = ({ stationBannerData }: Props) => {
   const navigate = useNavigate();
+ 
 
   console.log(stationBannerData?.station_name);
   const lineName = stationBannerData?.metro_lines?.[0]?.name;
 
-  const prevNextStation =
-    stationBannerData?.prev_next_stations?.[0]?.[lineName];
-
-  console.log("prevNextStation:", prevNextStation);
+  const prevNextStation = stationBannerData?.prev_next_stations?.[0]?.[
+    lineName
+  ]?.find(
+    (station: any) =>
+      station?.prev_station?.station_name || station?.next_station?.station_name
+  );
 
   const prevHandleClick = () => {
     navigate(`/station-data/${prevNextStation?.prev_station?.station_code}`);
@@ -33,8 +36,10 @@ const StationBanner = ({ stationBannerData }: Props) => {
 
   const prevStation =
     prevNextStation?.prev_station?.station_name || "No Previous Station";
+
   const nextStation =
     prevNextStation?.next_station?.station_name || "No Next Station";
+  console.log(prevStation, nextStation);
 
   return (
     <div className=" flex justify-between items-center w-full h-[300px] bg-blue-600 ">

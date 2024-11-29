@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { StationData } from "../utils/api";
 import StationInfoPageCards from "../Components/StationInfoPageCards";
 import StationBanner from "../Components/StationBanner";
+import { useParams } from "react-router-dom";
 
 interface StationInfoType {
   station_name: string;
@@ -16,14 +17,17 @@ interface StationInfoType {
 
 const StationInfo = () => {
   const [stationData, setStationData] = useState<StationInfoType>();
+  const stationParam = useParams();
   const stationInfoData = new StationData();
-  const FetchStationDetails = async (value: string) => {
-    const result = await stationInfoData.getStationBriefInfo(value);
-    setStationData(result);
+  const FetchStationDetails = async (value?: string) => {
+    if (value) {
+      const result = await stationInfoData.getStationBriefInfo(value);
+      setStationData(result);
+    }
   };
 
   useEffect(() => {
-    FetchStationDetails("RN");
+    FetchStationDetails(stationParam?.stationCode);
   }, []);
 
   return (
