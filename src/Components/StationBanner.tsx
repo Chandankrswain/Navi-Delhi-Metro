@@ -46,7 +46,6 @@ const StationBanner = ({ stationBannerData }: Props) => {
   const nextStation =
     prevNextStation?.next_station?.station_name || "No Next Station";
 
-  // Use useEffect to update currentStation whenever stationBannerData changes
   useEffect(() => {
     if (stationBannerData?.station_name) {
       setCurrentStation(stationBannerData.station_name);
