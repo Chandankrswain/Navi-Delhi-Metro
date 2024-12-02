@@ -1,4 +1,5 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface StationBannerType {
   line_id: number;
@@ -14,7 +15,6 @@ interface Props {
 
 const StationBanner = ({ stationBannerData }: Props) => {
   const navigate = useNavigate();
- 
 
   console.log(stationBannerData?.station_name);
   const lineName = stationBannerData?.metro_lines?.[0]?.name;
