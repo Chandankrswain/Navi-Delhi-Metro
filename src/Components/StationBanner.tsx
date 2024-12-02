@@ -14,9 +14,9 @@ interface Props {
 }
 
 const StationBanner = ({ stationBannerData }: Props) => {
+  const [currentStation, setCurrentStation] = useState<string>("");
   const navigate = useNavigate();
 
-  console.log(stationBannerData?.station_name);
   const lineName = stationBannerData?.metro_lines?.[0]?.name;
 
   const prevNextStation = stationBannerData?.prev_next_stations?.[0]?.[
@@ -27,11 +27,17 @@ const StationBanner = ({ stationBannerData }: Props) => {
   );
 
   const prevHandleClick = () => {
-    navigate(`/station-data/${prevNextStation?.prev_station?.station_code}`);
+    const prevStationCode = prevNextStation?.prev_station?.station_code;
+    if (prevStationCode) {
+      navigate(`/station-data/${prevStationCode}`);
+    }
   };
 
   const nextHandleClick = () => {
-    navigate(`/station-data/${prevNextStation?.next_station?.station_code}`);
+    const nextStationCode = prevNextStation?.next_station?.station_code;
+    if (nextStationCode) {
+      navigate(`/station-data/${nextStationCode}`);
+    }
   };
 
   const prevStation =
@@ -39,14 +45,18 @@ const StationBanner = ({ stationBannerData }: Props) => {
 
   const nextStation =
     prevNextStation?.next_station?.station_name || "No Next Station";
-  console.log(prevStation, nextStation);
+
+  // Use useEffect to update currentStation whenever stationBannerData changes
+  useEffect(() => {
+    if (stationBannerData?.station_name) {
+      setCurrentStation(stationBannerData.station_name);
+    }
+  }, [stationBannerData]);
 
   return (
-    <div className=" flex justify-between items-center w-full h-[300px] bg-blue-600 ">
+    <div className="flex justify-between items-center w-full h-[300px] bg-blue-600">
       <button onClick={prevHandleClick}>{prevStation}</button>
-      <div className="text-center align-middle">
-        {stationBannerData?.station_name}
-      </div>
+      <div className="text-center align-middle">{currentStation}</div>
       <button onClick={nextHandleClick}>{nextStation}</button>
     </div>
   );

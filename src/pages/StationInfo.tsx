@@ -28,7 +28,7 @@ const StationInfo = () => {
 
   useEffect(() => {
     FetchStationDetails(stationParam?.stationCode);
-  }, []);
+  }, [stationParam?.stationCode]);
 
   return (
     <div>
