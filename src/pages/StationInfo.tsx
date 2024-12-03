@@ -1,9 +1,10 @@
 import Navbar from "../Components/Navbar";
 import { useEffect, useState } from "react";
 import { StationData } from "../utils/api";
-import StationInfoPageCards from "../Components/StationInfoPageCards";
+
 import StationBanner from "../Components/StationBanner";
 import { useParams } from "react-router-dom";
+import EmergencyCardContainer from "../Components/EmergencyCardContainer";
 
 interface StationInfoType {
   station_name: string;
@@ -13,6 +14,7 @@ interface StationInfoType {
   previous_next_stations: Record<string, any>[];
   line_id: number;
   metro_lines: Record<string, any>[];
+  Hospital : Record<string, any>[];
 }
 
 const StationInfo = () => {
@@ -35,7 +37,7 @@ const StationInfo = () => {
       <Navbar />
       <StationBanner stationBannerData={stationData} />
       {stationData ? (
-        <StationInfoPageCards stationCardData={stationData} />
+        <EmergencyCardContainer stationCardData={stationData} />
       ) : (
         <p className="text-white">Loading station details...</p>
       )}

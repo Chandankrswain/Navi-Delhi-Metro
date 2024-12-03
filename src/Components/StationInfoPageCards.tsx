@@ -1,33 +1,32 @@
-interface StationCardType {
-  station_name: string;
-  id: number;
-  nearby_places: Record<string, any>[];
+interface EmergencyData {
+  [key: string]: any; // Adjust as per your exact Emergency data structure
 }
 
 interface Props {
-  stationCardData?: StationCardType;
+  Emergency?: EmergencyData;
 }
 
-const StationInfoPageCards = ({ stationCardData }: Props) => {
-  const emergencyData =
-    stationCardData?.nearby_places?.[0]?.Emergency?.Hospital?.[1]?.name;
-
+const StationInfoPageCards = ({ Emergency }: Props) => {
+  // Iterate over Emergency entries (e.g., "Hospital", "Police Station")
   return (
     <div className="text-white">
-      <div className=" flex flex-col justify-between items-center w-[300px] h-[300px] bg-red-900 border-white">
-        <img className="w-20 h-20 m-6" src="/public/images/logo.png" />
-        <p>Kalra Hospital</p>
-        <div>
-          <div className="flex justify-evenly">
-            <p>Icon</p>
-            <p>Distance </p>
+      <h1>Emergency Services</h1>
+      {Emergency &&
+        Object.entries(Emergency).map(([key, services], index) => (
+          <div key={index}>
+            <h2>{key}</h2>
+            {Array.isArray(services) &&
+              services.map((service, idx) => (
+                <div key={idx}>
+                  <p>Name: {service?.name || "N/A"}</p>
+                  <p>
+                    Distance from Metro: {service?.distance_from_metro || "N/A"}{" "}
+                    km
+                  </p>
+                </div>
+              ))}
           </div>
-          <div className="flex justify-evenly">
-            <p>Icon</p>
-            <p>Walking Time </p>
-          </div>
-        </div>
-      </div>
+        ))}
     </div>
   );
 };
