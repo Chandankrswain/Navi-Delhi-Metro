@@ -13,9 +13,13 @@ interface Props {
 
 const EmergencyCardContainer = ({ stationCardData }: Props) => {
   const EmergencyContainerData = useMemo(() => {
-    // Find the "Emergency" data directly
-    return stationCardData?.nearby_places?.find((place) => place?.Emergency)
-      ?.Emergency;
+    const emergencyObj = stationCardData?.nearby_places?.find((item) =>
+      item.hasOwnProperty("Emergency")
+    );
+
+    const { Emergency } = emergencyObj || {};
+
+    return Emergency;
   }, [stationCardData]);
 
   return (
