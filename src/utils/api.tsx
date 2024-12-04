@@ -73,7 +73,6 @@ export class NotificationData {
 
   async getNotices() {
     const result = await this.client.get(NOTICES);
-
     return result?.data || [];
   }
 }

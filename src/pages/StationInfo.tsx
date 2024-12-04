@@ -5,6 +5,7 @@ import { StationData } from "../utils/api";
 import StationBanner from "../Components/StationBanner";
 import { useParams } from "react-router-dom";
 import EmergencyCardContainer from "../Components/EmergencyCardContainer";
+import StationFacilityContainer from "../Components/StationFacilityContainer";
 
 interface StationInfoType {
   station_name: string;
@@ -14,7 +15,7 @@ interface StationInfoType {
   previous_next_stations: Record<string, any>[];
   line_id: number;
   metro_lines: Record<string, any>[];
-  Hospital : Record<string, any>[];
+  station_facility: Record<string, any>[];
 }
 
 const StationInfo = () => {
@@ -36,6 +37,13 @@ const StationInfo = () => {
     <div>
       <Navbar />
       <StationBanner stationBannerData={stationData} />
+      <h1 className="text-white font-bold text-5xl m-8">STATION DETAILS</h1>
+      {stationData ? (
+        <StationFacilityContainer stationDetails={stationData} />
+      ) : (
+        <p className="text-white">Loading station details...</p>
+      )}
+
       {stationData ? (
         <EmergencyCardContainer stationCardData={stationData} />
       ) : (

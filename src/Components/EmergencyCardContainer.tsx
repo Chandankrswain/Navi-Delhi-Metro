@@ -2,8 +2,6 @@ import { useMemo } from "react";
 import StationInfoPageCards from "./StationInfoPageCards";
 
 interface StationCardType {
-  station_name: string;
-  id: number;
   nearby_places: Record<string, any>[];
 }
 
@@ -23,7 +21,8 @@ const EmergencyCardContainer = ({ stationCardData }: Props) => {
   }, [stationCardData]);
 
   return (
-    <div>
+    <div className="flex flex-col items-center ">
+      <p className="text-gray-400 text-[40px] mb-4 mt-2 ">Emergency</p>
       <StationInfoPageCards Emergency={EmergencyContainerData} />
     </div>
   );
