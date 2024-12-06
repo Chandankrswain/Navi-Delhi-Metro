@@ -10,7 +10,7 @@ interface Props {
 
 const StationFacilityContainer = (stationDetails: Props) => {
   const Facility = stationDetails?.stationDetails?.station_facility || [];
-  console.log(Facility);
+
   return (
     <div className="text-white flex justify-center justify-between m-6">
       {Facility?.map((item: any, index: number) => (

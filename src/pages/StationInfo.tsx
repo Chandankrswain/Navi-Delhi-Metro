@@ -6,6 +6,7 @@ import StationBanner from "../Components/StationBanner";
 import { useParams } from "react-router-dom";
 import EmergencyCardContainer from "../Components/EmergencyCardContainer";
 import StationFacilityContainer from "../Components/StationFacilityContainer";
+import StationGateContainer from "../Components/StationGateContainer";
 
 interface StationInfoType {
   station_name: string;
@@ -16,6 +17,7 @@ interface StationInfoType {
   line_id: number;
   metro_lines: Record<string, any>[];
   station_facility: Record<string, any>[];
+  gates: Record<string, any>[];
 }
 
 const StationInfo = () => {
@@ -40,6 +42,11 @@ const StationInfo = () => {
       <h1 className="text-white font-bold text-5xl m-8">STATION DETAILS</h1>
       {stationData ? (
         <StationFacilityContainer stationDetails={stationData} />
+      ) : (
+        <p className="text-white">Loading station details...</p>
+      )}
+      {stationData ? (
+        <StationGateContainer stationGateData={stationData} />
       ) : (
         <p className="text-white">Loading station details...</p>
       )}
