@@ -14,10 +14,7 @@ const StationGateContainer = ({ stationGateData }: Props) => {
       <h2 className="text-lg font-bold text-white mb-4">Station Gates</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {gates?.map((items: any, index: number) => (
-          <div
-            key={index}
-            className="p-4 bg-gray-800 rounded-lg shadow-lg hover:bg-gray-700 transition-colors"
-          >
+          <div key={index} className="p-4 bg-gray-800 rounded-lg shadow-lg ">
             <div className="flex justify-between items-center mb-2">
               <p className="text-lg font-semibold text-yellow-300">
                 {items?.gate_name || "Unnamed Gate"}
