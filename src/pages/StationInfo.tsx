@@ -8,6 +8,7 @@ import EmergencyCardContainer from "../Components/EmergencyCardContainer";
 import StationFacilityContainer from "../Components/StationFacilityContainer";
 import StationGateContainer from "../Components/StationGateContainer";
 import StationLiftContainer from "../Components/StationLiftContainer";
+import StationServicesContainer from "../Components/StationServicesContainer";
 
 interface StationInfoType {
   station_name: string;
@@ -20,6 +21,7 @@ interface StationInfoType {
   station_facility: Record<string, any>[];
   gates: Record<string, any>[];
   lifts: Record<string, any>[];
+  stations_facilities: Record<string, any>[];
 }
 
 const StationInfo = () => {
@@ -57,6 +59,11 @@ const StationInfo = () => {
 
       {stationData ? (
         <StationLiftContainer stationLiftData={stationData} />
+      ) : (
+        <p className="text-white">Loading station details...</p>
+      )}
+      {stationData ? (
+        <StationServicesContainer stationServicesData={stationData} />
       ) : (
         <p className="text-white">Loading station details...</p>
       )}
