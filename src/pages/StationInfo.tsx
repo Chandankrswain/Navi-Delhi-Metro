@@ -1,7 +1,6 @@
 import Navbar from "../Components/Navbar";
 import { useEffect, useState } from "react";
 import { StationData } from "../utils/api";
-
 import StationBanner from "../Components/StationBanner";
 import { useParams } from "react-router-dom";
 import EmergencyCardContainer from "../Components/EmergencyCardContainer";
@@ -9,6 +8,8 @@ import StationFacilityContainer from "../Components/StationFacilityContainer";
 import StationGateContainer from "../Components/StationGateContainer";
 import StationLiftContainer from "../Components/StationLiftContainer";
 import StationServicesContainer from "../Components/StationServicesContainer";
+import ParkingContainer from "../Components/ParkingContainer";
+import StationPlatformContainer from "../Components/stationPlatformContainer";
 
 interface StationInfoType {
   station_name: string;
@@ -22,6 +23,8 @@ interface StationInfoType {
   gates: Record<string, any>[];
   lifts: Record<string, any>[];
   stations_facilities: Record<string, any>[];
+  parkings: Record<string, any>[];
+  platforms: Record<string, any>[];
 }
 
 const StationInfo = () => {
@@ -42,34 +45,18 @@ const StationInfo = () => {
   return (
     <div>
       <Navbar />
-      <StationBanner stationBannerData={stationData} />
-      <h1 className="text-white font-bold text-5xl m-8">STATION DETAILS</h1>
-
       {stationData ? (
-        <StationFacilityContainer stationDetails={stationData} />
-      ) : (
-        <p className="text-white">Loading station details...</p>
-      )}
-
-      {stationData ? (
-        <StationGateContainer stationGateData={stationData} />
-      ) : (
-        <p className="text-white">Loading station details...</p>
-      )}
-
-      {stationData ? (
-        <StationLiftContainer stationLiftData={stationData} />
-      ) : (
-        <p className="text-white">Loading station details...</p>
-      )}
-      {stationData ? (
-        <StationServicesContainer stationServicesData={stationData} />
-      ) : (
-        <p className="text-white">Loading station details...</p>
-      )}
-
-      {stationData ? (
-        <EmergencyCardContainer stationCardData={stationData} />
+        <div>
+          <StationBanner stationBannerData={stationData} />
+          <h1 className="text-white font-bold text-5xl m-8">STATION DETAILS</h1>
+          <StationFacilityContainer stationDetails={stationData} />
+          <StationGateContainer stationGateData={stationData} />
+          <StationLiftContainer stationLiftData={stationData} />
+          <StationServicesContainer stationServicesData={stationData} />
+          <ParkingContainer stationParkingData={stationData} />
+          <StationPlatformContainer stationPlatformData={stationData} />
+          <EmergencyCardContainer stationCardData={stationData} />
+        </div>
       ) : (
         <p className="text-white">Loading station details...</p>
       )}

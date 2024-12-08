@@ -53,10 +53,25 @@ const StationBanner = ({ stationBannerData }: Props) => {
   }, [stationBannerData]);
 
   return (
-    <div className="flex justify-between items-center w-full h-[300px] bg-blue-600">
-      <button onClick={prevHandleClick}>{prevStation}</button>
-      <div className="text-center align-middle">{currentStation}</div>
-      <button onClick={nextHandleClick}>{nextStation}</button>
+    <div className="flex justify-between items-center w-full h-[300px] bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg">
+      <button
+        onClick={prevHandleClick}
+        className=" w-[200px] px-4 py-2 h-full bg-[#424242] transition-all ease-in-out duration-300 text-white text-sm font-semibold"
+      >
+        {prevStation}
+      </button>
+      <div className="text-center">
+        <h1 className="text-3xl font-bold mb-2">{currentStation}</h1>
+        <p className="text-lg italic text-gray-200">
+          {lineName || "Line Information Not Available"}
+        </p>
+      </div>
+      <button
+        onClick={nextHandleClick}
+        className=" w-[200px] px-4 py-2 h-full bg-[#424242] transition-all ease-in-out duration-300 text-white text-sm font-semibold"
+      >
+        {nextStation}
+      </button>
     </div>
   );
 };
