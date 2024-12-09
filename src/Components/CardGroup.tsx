@@ -5,7 +5,7 @@ const Counter = ({ finalCount }: { finalCount: number }) => {
   const countRef = useRef(0);
 
   useEffect(() => {
-    const stepTime = 7;
+    const stepTime = 20;
     const increment = finalCount / 100;
 
     const interval = setInterval(() => {
