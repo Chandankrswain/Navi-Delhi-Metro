@@ -9,7 +9,7 @@ import StationGateContainer from "../Components/StationGateContainer";
 import StationLiftContainer from "../Components/StationLiftContainer";
 import StationServicesContainer from "../Components/StationServicesContainer";
 import ParkingContainer from "../Components/ParkingContainer";
-import StationPlatformContainer from "../Components/stationPlatformContainer";
+import StationPlatformContainer from "../Components/StationPlatformContainer";
 
 interface StationInfoType {
   station_name: string;
