@@ -21,9 +21,9 @@ const MetroCards = ({ lineData, card }: Props) => {
             onClick={() => handleSubmit(data.line_code)}
             key={index}
             style={{
-              backgroundImage: `url(${card[data.class_primary]})`,
+              backgroundImage: `url(${card?.[data.class_primary]})`,
             }}
-            className="flex flex-col justify-between w-[300px] h-[500px] border border-[#7a7a7a] bg-contain bg-no-repeat p-7 mb-10"
+            className="flex flex-col justify-between w-[300px] h-[500px] border border-[#7a7a7a] bg-contain bg-no-repeat p-7 mb-10 hover:border-2 hover:border-white"
           >
             <p className="text-[#7a7a7a] font-['Share_Tech_Mono'] tracking-widest">
               NORMAL SERVICE

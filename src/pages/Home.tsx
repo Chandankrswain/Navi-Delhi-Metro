@@ -10,6 +10,7 @@ import Navbar from "../Components/Navbar";
 import NoticesAlerts from "../Components/NoticesAlerts";
 import ServicesCards from "../Components/ServicesCards";
 import { StationData } from "../utils/api";
+import { grey } from "@mui/material/colors";
 
 const bannerTextData = [
   { number: "393", description: "TOTAL NETWORK LENGTH  " },
@@ -88,40 +89,15 @@ const ourServicesData = [
 const cardBackgroundData = {
   red: "/images/red.png",
   yellow: "/images/yellow.png",
+  blue: "/images/blue.png",
+  green: "/images/green.png",
+  violet: "/images/voilet.png",
+  pink: "/images/pink.png",
+  magenta: "/images/magenta.png",
+  grey: "/images/grey.png",
+  ael: "/images/orange.png",
+  gurgaon: "/images/rapid.png",
 };
-// {
-//   backgroundImage: "/images/yellow.png",
-// },
-// {
-//   backgroundImage: "/images/blue.png",
-// },
-// {
-//   backgroundImage: "/images/blue.png",
-// },
-// {
-//   backgroundImage: "/images/green.png",
-// },
-// {
-//   backgroundImage: "/images/green.png",
-// },
-// {
-//   backgroundImage: "/images/voilet.png",
-// },
-// {
-//   backgroundImage: "/images/pink.png",
-// },
-// {
-//   backgroundImage: "/images/magenta.png",
-// },
-// {
-//   backgroundImage: "/images/grey.png",
-// },
-// {
-//   backgroundImage: "/images/orange.png",
-// },
-// {
-//   backgroundImage: "/images/rapid.png",
-// },
 
 interface LinetypeInfo {
   line_code: string;
