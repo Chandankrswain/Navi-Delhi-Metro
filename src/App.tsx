@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import { StationRoutes } from "./pages/StationRoutes";
 import StationInfo from "./pages/StationInfo";
+import LineInfo from "./pages/LineInfo";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
             element={<StationRoutes />}
           />
           <Route path="/station-data/:stationCode" element={<StationInfo />} />
+          <Route path="/line/:stationCode" element={<LineInfo />} />
         </Routes>
       </Router>
     </>

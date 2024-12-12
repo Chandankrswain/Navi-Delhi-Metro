@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Banner from "../Components/Banner";
 import CardGroup from "../Components/CardGroup";
 import Disclaimer from "../Components/Disclaimer";
@@ -8,6 +9,7 @@ import MetroCards from "../Components/MetroCards";
 import Navbar from "../Components/Navbar";
 import NoticesAlerts from "../Components/NoticesAlerts";
 import ServicesCards from "../Components/ServicesCards";
+import { StationData } from "../utils/api";
 
 const bannerTextData = [
   { number: "393", description: "TOTAL NETWORK LENGTH  " },
@@ -83,70 +85,68 @@ const ourServicesData = [
   },
 ];
 
-const cardTextData = [
-  {
-    backgroundImage: "/images/red.png",
-    line: "LINE 1",
-    colour: "Red Line",
-  },
-  {
-    backgroundImage: "/images/yellow.png",
-    line: "LINE 2",
-    colour: "Yellow Line",
-  },
-  {
-    backgroundImage: "/images/blue.png",
-    line: "LINE 3",
-    colour: "Blue Line 1",
-  },
-  {
-    backgroundImage: "/images/blue.png",
-    line: "LINE 4",
-    colour: "Blue Line 2",
-  },
-  {
-    backgroundImage: "/images/green.png",
-    line: "LINE 5",
-    colour: "Green Line 1",
-  },
-  {
-    backgroundImage: "/images/green.png",
-    line: "LINE 6",
-    colour: "Green Line 2",
-  },
-  {
-    backgroundImage: "/images/voilet.png",
-    line: "LINE 7",
-    colour: "Violet Line",
-  },
-  {
-    backgroundImage: "/images/pink.png",
-    line: "LINE 8",
-    colour: "Pink Line",
-  },
-  {
-    backgroundImage: "/images/magenta.png",
-    line: "LINE 9",
-    colour: "Magenta Line",
-  },
-  {
-    backgroundImage: "/images/grey.png",
-    line: "LINE 10",
-    colour: "Grey Line",
-  },
-  {
-    backgroundImage: "/images/orange.png",
-    line: "LINE 11",
-    colour: "Orange Line",
-  },
-  {
-    backgroundImage: "/images/rapid.png",
-    line: "LINE 12",
-    colour: "Rapid Metro RMGL",
-  },
-];
+const cardBackgroundData = {
+  red: "/images/red.png",
+  yellow: "/images/yellow.png",
+};
+// {
+//   backgroundImage: "/images/yellow.png",
+// },
+// {
+//   backgroundImage: "/images/blue.png",
+// },
+// {
+//   backgroundImage: "/images/blue.png",
+// },
+// {
+//   backgroundImage: "/images/green.png",
+// },
+// {
+//   backgroundImage: "/images/green.png",
+// },
+// {
+//   backgroundImage: "/images/voilet.png",
+// },
+// {
+//   backgroundImage: "/images/pink.png",
+// },
+// {
+//   backgroundImage: "/images/magenta.png",
+// },
+// {
+//   backgroundImage: "/images/grey.png",
+// },
+// {
+//   backgroundImage: "/images/orange.png",
+// },
+// {
+//   backgroundImage: "/images/rapid.png",
+// },
+
+interface LinetypeInfo {
+  line_code: string;
+  line_name: string;
+  line_color: string;
+}
 
 const Home = () => {
+  const [lineData, setLineData] = useState<LinetypeInfo[]>([]);
+
+  useEffect(() => {
+    const FetchLinesDetails = async () => {
+      try {
+        const lineInfoData = new StationData();
+        const result = await lineInfoData.getLines();
+        console.log(result);
+        setLineData(result);
+      } catch (error) {
+        console.error("Error fetching line details:", error);
+      }
+    };
+
+    FetchLinesDetails();
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -174,7 +174,7 @@ const Home = () => {
           <p className="text-white text-[40px] sm:text-[96px] font-extrabold leading-none mb-20">
             METRO LINES.
           </p>
-          <MetroCards cardData={cardTextData} />
+          <MetroCards lineData={lineData} card={cardBackgroundData} />
         </div>
       </div>
       <Disclaimer />
