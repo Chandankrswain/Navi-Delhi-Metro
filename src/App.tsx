@@ -18,7 +18,7 @@ const App = () => {
             element={<StationRoutes />}
           />
           <Route path="/station-data/:stationCode" element={<StationInfo />} />
-          <Route path="/line/:stationCode" element={<LineInfo />} />
+          <Route path="/line/:lineCode" element={<LineInfo />} />
         </Routes>
       </Router>
     </>
