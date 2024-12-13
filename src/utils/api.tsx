@@ -2,6 +2,7 @@ import apiClient from "../services/axios";
 import {
   ALL_LINES,
   GET_LINE,
+  GET_STATION_LINE,
   LEAST_DISTANCE,
   MINIMUM_INTERCHANGE,
   NOTICES,
@@ -25,7 +26,6 @@ export class StationData {
 
   async getLines() {
     const result = await this.client.get(ALL_LINES);
-    console.log("API response:", result.data);
     return result?.data || [];
   }
 
@@ -33,6 +33,14 @@ export class StationData {
     const result = await this.client.get(
       GET_LINE.replace(":LINE_CODE", keyword)
     );
+
+    return result?.data || [];
+  }
+  async getLineStationsData(keyword: string) {
+    const result = await this.client.get(
+      GET_STATION_LINE.replace(":LINE_CODE", keyword)
+    );
+
     return result?.data || [];
   }
 
@@ -66,7 +74,7 @@ export class StationData {
   }
   async getStationBriefInfo(keyword: string) {
     const result = await this.client.get(
-      STATION_INFO.replace(":STATION.CODE", keyword)
+      STATION_INFO.replace(":STATION_CODE", keyword)
     );
     return result?.data || [];
   }

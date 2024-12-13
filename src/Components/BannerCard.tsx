@@ -33,8 +33,6 @@ const BannerCard = ({ search, stations, setStations }: Props) => {
     toStation: undefined,
   });
 
-  
-
   const handleFilter = (selectedFilter: any) => {
     if (selectedFilter == FILTER.SHORTEST_ROUTE) {
       setFilter(FILTER.SHORTEST_ROUTE);
@@ -54,7 +52,6 @@ const BannerCard = ({ search, stations, setStations }: Props) => {
     }
 
     if (filter == FILTER.MINIMUM_INTERCHANGE) {
-      console.log("hello");
       navigate(
         `/station-routes/minimum-interchange/${dataField.fromStation?.station_code}/${dataField.toStation?.station_code}`
       );

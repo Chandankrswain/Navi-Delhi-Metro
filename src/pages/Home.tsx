@@ -113,7 +113,6 @@ const Home = () => {
       try {
         const lineInfoData = new StationData();
         const result = await lineInfoData.getLines();
-        console.log(result);
         setLineData(result);
       } catch (error) {
         console.error("Error fetching line details:", error);
