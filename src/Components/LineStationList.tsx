@@ -28,44 +28,46 @@ const LineStationAccordion = ({ stationListData }: Props) => {
         Station Status
       </h2>
       <div className="space-y-4">
-        {stationListData?.map((item, index) => (
-          <div
-            key={index}
-            className="bg-gray-700 rounded-lg shadow-md overflow-hidden"
-          >
-            <button
-              onClick={() => toggleAccordion(index, item.station_code)}
-              className="w-full flex justify-between items-center px-5 py-4 bg-gray-600 text-white text-lg font-medium hover:bg-gray-500 transition"
+        {stationListData
+          ?.slice(0, stationListData.length - 1)
+          .map((item, index) => (
+            <div
+              key={index}
+              className="bg-gray-700 rounded-lg shadow-md overflow-hidden"
             >
-              <div className="flex items-center space-x-3">
-                <span className="font-semibold">
-                  {item?.station_name || "Unknown Station"}
+              <button
+                onClick={() => toggleAccordion(index, item.station_code)}
+                className="w-full flex justify-between items-center px-5 py-4 bg-gray-600 text-white text-lg font-medium hover:bg-gray-500 transition"
+              >
+                <div className="flex items-center space-x-3">
+                  <span className="font-semibold">
+                    {item?.station_name || "Unknown Station"}
+                  </span>
+                  <span
+                    className={`text-sm px-2 py-1 rounded ${
+                      item?.status === "Station Open"
+                        ? "bg-green-700 text-white"
+                        : "bg-red-400 text-white"
+                    }`}
+                  >
+                    {item?.status || "Unknown"}
+                  </span>
+                </div>
+                <span>
+                  {activeIndex === index ? (
+                    <span className="text-teal-400">▲</span>
+                  ) : (
+                    <span className="text-teal-400">▼</span>
+                  )}
                 </span>
-                <span
-                  className={`text-sm px-2 py-1 rounded ${
-                    item?.status === "Station Open"
-                      ? "bg-green-700 text-white"
-                      : "bg-red-400 text-white"
-                  }`}
-                >
-                  {item?.status || "Unknown"}
-                </span>
-              </div>
-              <span>
-                {activeIndex === index ? (
-                  <span className="text-teal-400">▲</span>
-                ) : (
-                  <span className="text-teal-400">▼</span>
-                )}
-              </span>
-            </button>
-            {activeIndex === index && (
-              <div className="px-5 py-3 bg-gray-800 text-sm text-gray-300">
-                <LineStationCard stationCode={selectedStationCode} />
-              </div>
-            )}
-          </div>
-        ))}
+              </button>
+              {activeIndex === index && (
+                <div className="px-5 py-3 bg-gray-800 text-sm text-gray-300">
+                  <LineStationCard stationCode={selectedStationCode} />
+                </div>
+              )}
+            </div>
+          ))}
       </div>
     </div>
   );
