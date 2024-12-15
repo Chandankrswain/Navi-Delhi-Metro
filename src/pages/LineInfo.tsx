@@ -29,7 +29,6 @@ const LineInfo = () => {
   };
 
   useEffect(() => {
-
     FetchLineData(lineParams?.lineCode || "");
   }, [lineParams?.lineCode]);
 
@@ -44,9 +43,7 @@ const LineInfo = () => {
       {lineStationData?.length > 0 ? (
         <LineInfoLowerContainer lineStationData={lineStationData} />
       ) : (
-        // <p className="text-white text-6xl ">Loading all station list...</p>
         <p className="text-white text-6xl ">Loading all station list...</p>
-        // <LineInfoLowerContainer lineStationData={lineStationData} />
       )}
     </div>
   );

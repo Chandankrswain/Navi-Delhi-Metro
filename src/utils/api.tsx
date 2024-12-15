@@ -4,6 +4,7 @@ import {
   GET_LINE,
   GET_STATION_LINE,
   LEAST_DISTANCE,
+  LINE_STATIONCARD_INFO,
   MINIMUM_INTERCHANGE,
   NOTICES,
   SEARCH_STATIONS,
@@ -42,6 +43,14 @@ export class StationData {
       GET_STATION_LINE.replace(":LINE_CODE", keyword)
     );
 
+    return result?.data || [];
+  }
+
+  async getLineStationCardInfo(keyword: string) {
+    const result = await this.client.get(
+      LINE_STATIONCARD_INFO.replace(":STATION_CODE", keyword)
+    );
+    console.log(result);
     return result?.data || [];
   }
 

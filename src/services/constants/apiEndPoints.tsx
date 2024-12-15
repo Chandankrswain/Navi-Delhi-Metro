@@ -9,3 +9,5 @@ export const MINIMUM_INTERCHANGE =
   "/v2/en/station_route/:From_Station_Code/:To_Station_Code/minimum-interchange/:time";
 export const NOTICES = "/v2/en/passengers/notification";
 export const STATION_INFO = "/v2/en/station/:STATION_CODE";
+export const LINE_STATIONCARD_INFO =
+  "/v2/en/station_brief_detail/:STATION_CODE";
