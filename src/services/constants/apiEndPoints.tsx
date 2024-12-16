@@ -11,3 +11,4 @@ export const NOTICES = "/v2/en/passengers/notification";
 export const STATION_INFO = "/v2/en/station/:STATION_CODE";
 export const LINE_STATIONCARD_INFO =
   "/v2/en/station_brief_detail/:STATION_CODE";
+export const TOURISM = "/v2/en/tourism";

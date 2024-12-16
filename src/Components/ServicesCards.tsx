@@ -1,6 +1,18 @@
 import { HiArrowUpRight } from "react-icons/hi2";
+import FareCalculator from "./FareCalculator";
+import { useNavigate } from "react-router-dom";
 
 const ServicesCards = ({ servicesData }: any) => {
+  const navigate = useNavigate();
+
+  const handleClick = (id: number) => {
+    if (id === 0) {
+      <FareCalculator />;
+    } else {
+      navigate("/tourGuide");
+    }
+  };
+
   return (
     <div className="flex flex-wrap justify-between">
       {servicesData.map((data: any, index: number) => {
@@ -9,7 +21,10 @@ const ServicesCards = ({ servicesData }: any) => {
             key={index}
             className="flex flex-col w-screen sm:w-[320px] h-[338px] justify-between  border-t border-b border-[#7a7a7a] pl-8 pr-8 sm:pl-0 sm:pr-0 pt-5 pb-5"
           >
-            <HiArrowUpRight className="text-white w-8 h-7 ml-auto " />
+            <HiArrowUpRight
+              onClick={() => handleClick(data.id)}
+              className="text-white w-8 h-7 ml-auto "
+            />
             <div className="flex justify-between">
               <img className="w-14 h-14" src={data.image} alt="" />
               {(data.id === 0 || data.id === 7) && (

@@ -4,6 +4,7 @@ import Contact from "./pages/Contact";
 import { StationRoutes } from "./pages/StationRoutes";
 import StationInfo from "./pages/StationInfo";
 import LineInfo from "./pages/LineInfo";
+import TourGuide from "./pages/TourGuide";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           />
           <Route path="/station-data/:stationCode" element={<StationInfo />} />
           <Route path="/line/:lineCode" element={<LineInfo />} />
+          <Route path="/tourGuide" element={<TourGuide />} />
         </Routes>
       </Router>
     </>

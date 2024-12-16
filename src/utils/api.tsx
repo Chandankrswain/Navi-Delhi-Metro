@@ -9,6 +9,7 @@ import {
   NOTICES,
   SEARCH_STATIONS,
   STATION_INFO,
+  TOURISM,
 } from "../services/constants/apiEndPoints";
 import { getISTTime } from "./helper";
 
@@ -98,6 +99,18 @@ export class NotificationData {
 
   async getNotices() {
     const result = await this.client.get(NOTICES);
+    return result?.data || [];
+  }
+}
+
+export class TourismData {
+  client: any;
+  constructor() {
+    this.client = apiClient;
+  }
+
+  async getTourism() {
+    const result = await this.client.get(TOURISM);
     return result?.data || [];
   }
 }
