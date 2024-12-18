@@ -114,3 +114,21 @@ export class TourismData {
     return result?.data || [];
   }
 }
+
+export class FareCalculatorData {
+  client: any;
+  constructor() {
+    this.client = apiClient;
+  }
+  async getTotalFare(fromStation: string, toStation: string, type: string) {
+    const url = LEAST_DISTANCE.replace(
+      "::FROM_STATION:TO_STATION/:TYPE",
+      fromStation
+    )
+      .replace(":TO_STATION", toStation)
+      .replace(":TYPE", type);
+
+    const result = await this.client.get(url);
+    return result?.data || [];
+  }
+}

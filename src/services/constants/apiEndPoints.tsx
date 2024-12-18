@@ -12,3 +12,5 @@ export const STATION_INFO = "/v2/en/station/:STATION_CODE";
 export const LINE_STATIONCARD_INFO =
   "/v2/en/station_brief_detail/:STATION_CODE";
 export const TOURISM = "/v2/en/tourism";
+export const FARE =
+  "/v2/en/tourismv2/en/new_fare_with_route/:FROM_STATION/:TO_STATION/:TYPE/";
