@@ -10,8 +10,6 @@ interface DataState {
 }
 
 const FareCalculator = () => {
-  const [from, setFrom] = useState("");
-  const [to, setTo] = useState("");
   const [fareData, setFareData] = useState([]);
   const [filter, setFilter] = useState("shortest");
   const [dataField, setDataField] = useState<DataState>({
