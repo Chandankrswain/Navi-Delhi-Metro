@@ -28,7 +28,7 @@ const ServicesCards = ({ servicesData }: any) => {
   };
 
   const handleClick = (id: number) => {
-    actions[id]?.();
+    actions[id]();
   };
 
   return (
@@ -72,7 +72,11 @@ const ServicesCards = ({ servicesData }: any) => {
               &times;
             </button>
 
-            <FareCalculator />
+            <FareCalculator
+              search={searchStations}
+              stations={stations}
+              setStations={setStations}
+            />
           </div>
         </div>
       )}

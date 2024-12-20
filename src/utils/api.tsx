@@ -1,6 +1,7 @@
 import apiClient from "../services/axios";
 import {
   ALL_LINES,
+  FARE,
   GET_LINE,
   GET_STATION_LINE,
   LEAST_DISTANCE,
@@ -51,7 +52,7 @@ export class StationData {
     const result = await this.client.get(
       LINE_STATIONCARD_INFO.replace(":STATION_CODE", keyword)
     );
-    console.log(result);
+
     return result?.data || [];
   }
 
@@ -121,14 +122,11 @@ export class FareCalculatorData {
     this.client = apiClient;
   }
   async getTotalFare(fromStation: string, toStation: string, type: string) {
-    const url = LEAST_DISTANCE.replace(
-      "::FROM_STATION:TO_STATION/:TYPE",
-      fromStation
-    )
+    const url = FARE.replace(":FROM_STATION", fromStation)
       .replace(":TO_STATION", toStation)
       .replace(":TYPE", type);
 
     const result = await this.client.get(url);
-    return result?.data || [];
+    return result.data;
   }
 }

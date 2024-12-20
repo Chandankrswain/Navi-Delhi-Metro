@@ -10,7 +10,6 @@ interface Props {
   lineStationData?: LineInfoType[];
 }
 const LineInfoLowerContainer = ({ lineStationData }: Props) => {
-  console.log(lineStationData);
   return (
     <div>
       <LineStationList stationListData={lineStationData} />

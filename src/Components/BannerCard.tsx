@@ -135,9 +135,7 @@ const BannerCard = ({ search, stations, setStations }: Props) => {
             value={dataField?.fromSearchField}
             onChange={inputHandler}
             onFocus={() => {
-              inputHandler({
-                target: { name: "focusField", value: "from" },
-              } as any);
+              inputHandler({target: { name: "focusField", value: "from" } } as any);
               setStations([]);
             }}
           />
