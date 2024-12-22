@@ -1,8 +1,16 @@
 import { useEffect, useState } from "react";
 import { TourismData } from "../utils/api";
+import TourGuideCard from "../Components/TourGuideCard";
 
 interface TourismType {
   name: string;
+  station: {
+    station_name: string;
+  };
+  distance_from_metro: string;
+  photograph_mapping: {
+    file: string;
+  };
 }
 
 const TourGuide = () => {
@@ -24,12 +32,7 @@ const TourGuide = () => {
 
   return (
     <div className="text-white">
-      <h1>Tourism Guide</h1>
-      {tourismData.length > 0 ? (
-        tourismData.map((item, index) => <p key={index}>{item.name}</p>)
-      ) : (
-        <p>Loading...</p>
-      )}
+      <TourGuideCard tourGuide={tourismData} />
     </div>
   );
 };
