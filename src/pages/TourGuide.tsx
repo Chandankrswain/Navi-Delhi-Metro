@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { TourismData } from "../utils/api";
 import TourGuideCard from "../Components/TourGuideCard";
 
-interface TourismType {
+export interface TourismType {
   name: string;
   station: {
     station_name: string;

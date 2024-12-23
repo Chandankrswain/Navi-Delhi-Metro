@@ -19,7 +19,8 @@ const ServicesCards = ({ servicesData }: any) => {
   const actions: { [key: number]: () => void } = {
     0: () => setShowFareCalculator(true),
     1: () => navigate("/tourGuide"),
-    2: () => navigate("/metroMeseum"),
+    2: () =>
+      navigate((window.location.href = "https://museum.delhimetrorail.com/")),
     3: () => navigate("/lostAndFound"),
     4: () => navigate("/travelAdvisory"),
     5: () => navigate("/tickets"),

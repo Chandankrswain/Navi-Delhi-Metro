@@ -1,15 +1,5 @@
+import { TourismType } from "../pages/TourGuide";
 import { IMAGE_CDM } from "../services/constants";
-
-interface TourismType {
-  name: string;
-  station: {
-    station_name: string;
-  };
-  distance_from_metro: string;
-  photograph_mapping: {
-    file: string;
-  };
-}
 
 interface Props {
   tourGuide: TourismType[];
