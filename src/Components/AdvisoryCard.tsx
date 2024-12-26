@@ -9,9 +9,6 @@ interface Props {
 }
 
 const AdvisoryCard = ({ advisoryData }: Props) => {
-  const [showDoList, setShowDoList] = useState(true);
-  const [showDontList, setShowDontList] = useState(true);
-
   const doList = advisoryData?.do;
   const dontList = advisoryData?.donts;
 
@@ -23,31 +20,29 @@ const AdvisoryCard = ({ advisoryData }: Props) => {
           <h2 className="text-2xl mb-4 flex items-center">
             <FaCheckCircle className="text-green-500 mr-2" /> Do's
           </h2>
-          {showDoList && (
-            <ul className="list-disc list-inside space-y-2">
-              {doList.map((item: string, index: number) => (
-                <li key={index} className="flex items-start">
-                  <FaCheckCircle className="text-green-500 mr-2 mt-1" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          )}
+
+          <ul className="list-disc list-inside space-y-2">
+            {doList.map((item: string, index: number) => (
+              <li key={index} className="flex items-start">
+                <FaCheckCircle className="text-green-500 mr-2 mt-1" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
         <div className="w-full md:w-1/2 p-4">
           <h2 className="text-2xl mb-4 flex items-center">
             <FaTimesCircle className="text-red-500 mr-2" /> Don'ts
           </h2>
-          {showDontList && (
-            <ul className="list-disc list-inside space-y-2">
-              {dontList.map((item: string, index: number) => (
-                <li key={index} className="flex items-start">
-                  <FaTimesCircle className="text-red-500 mr-2 mt-1" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          )}
+
+          <ul className="list-disc list-inside space-y-2">
+            {dontList.map((item: string, index: number) => (
+              <li key={index} className="flex items-start">
+                <FaTimesCircle className="text-red-500 mr-2 mt-1" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
       <div className="mt-6 space-y-4">
