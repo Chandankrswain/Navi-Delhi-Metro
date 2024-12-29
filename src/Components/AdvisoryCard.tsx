@@ -1,5 +1,6 @@
-import React, { useState } from "react";
 import { FaCheckCircle, FaTimesCircle } from "react-icons/fa";
+import ProbihitedPdf from "../files/list-of-prohibited-Items.pdf";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   advisoryData: {
@@ -9,8 +10,18 @@ interface Props {
 }
 
 const AdvisoryCard = ({ advisoryData }: Props) => {
+  const navigate = useNavigate();
   const doList = advisoryData?.do;
   const dontList = advisoryData?.donts;
+
+  const handleClick = () => {
+    const pdf = { ProbihitedPdf };
+    window.open(pdf.ProbihitedPdf); // while open the pdf file on the new tab
+  };
+
+  const gotoPenalties = () => {
+    navigate("/penalties");
+  };
 
   return (
     <div className=" p-6 shadow-lg mx-auto">
@@ -47,12 +58,18 @@ const AdvisoryCard = ({ advisoryData }: Props) => {
       </div>
       <div className="mt-6 space-y-4">
         <p className="border border-gray-500 p-2">
-          <button className="text-white px-4 py-2 rounded w-full">
+          <button
+            onClick={handleClick}
+            className="text-white px-4 py-2 rounded w-full"
+          >
             Items Prohibited on Metro Systems
           </button>
         </p>
         <p className="border border-gray-500 p-2">
-          <button className=" text-white px-4 py-2 rounded w-full">
+          <button
+            onClick={gotoPenalties}
+            className=" text-white px-4 py-2 rounded w-full"
+          >
             Penalties
           </button>
         </p>

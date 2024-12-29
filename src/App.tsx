@@ -11,6 +11,7 @@ import Tickets from "./pages/Tickets";
 import LastMileConnectivity from "./pages/LastMileConnectivity";
 import CarbonLiteMetro from "./pages/CarbonLiteMetro";
 import LostFound from "./pages/LostFound";
+import Penalties from "./pages/Penalties";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
             element={<LastMileConnectivity />}
           />
           <Route path="/carbonLiteMetro" element={<CarbonLiteMetro />} />
+          <Route path="/penalties" element={<Penalties />} />
         </Routes>
       </Router>
     </>

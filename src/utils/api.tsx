@@ -8,6 +8,7 @@ import {
   LINE_STATIONCARD_INFO,
   MINIMUM_INTERCHANGE,
   NOTICES,
+  PENALTIES,
   SEARCH_STATIONS,
   STATION_INFO,
   TOURISM,
@@ -127,6 +128,18 @@ export class FareCalculatorData {
       .replace(":TYPE", type);
 
     const result = await this.client.get(url);
+    return result.data;
+  }
+}
+
+export class PenaltiesData {
+  client: any;
+  constructor() {
+    this.client = apiClient;
+  }
+  async getPenalties() {
+    const result = await this.client.get(PENALTIES);
+
     return result.data;
   }
 }
