@@ -12,6 +12,7 @@ import LastMileConnectivity from "./pages/LastMileConnectivity";
 import CarbonLiteMetro from "./pages/CarbonLiteMetro";
 import LostFound from "./pages/LostFound";
 import Penalties from "./pages/Penalties";
+import EmergencyEvacuation from "./pages/EmergencyEvacuation";
 
 const App = () => {
   return (
@@ -36,6 +37,10 @@ const App = () => {
           />
           <Route path="/carbonLiteMetro" element={<CarbonLiteMetro />} />
           <Route path="/penalties" element={<Penalties />} />
+          <Route
+            path="/emergencyevacutaion"
+            element={<EmergencyEvacuation />}
+          />
         </Routes>
       </Router>
     </>

@@ -1,6 +1,7 @@
 import apiClient from "../services/axios";
 import {
   ALL_LINES,
+  EMERGENCY_EVACUATION,
   FARE,
   GET_LINE,
   GET_STATION_LINE,
@@ -140,6 +141,16 @@ export class PenaltiesData {
   async getPenalties() {
     const result = await this.client.get(PENALTIES);
 
+    return result.data;
+  }
+}
+export class EmergencyEvacuationData {
+  client: any;
+  constructor() {
+    this.client = apiClient;
+  }
+  async getEmergencyEvacution() {
+    const result = await this.client.get(EMERGENCY_EVACUATION);
     return result.data;
   }
 }
