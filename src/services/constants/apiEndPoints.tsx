@@ -15,5 +15,6 @@ export const TOURISM = "/v2/en/tourism";
 export const FARE =
   "/v2/en/new_fare_with_route/:FROM_STATION/:TO_STATION/:TYPE";
 export const PENALTIES = "/v2/en/passenger/penalties";
+export const LOST_FOUND_LIST = "/v2/en/lost_found_items/?page=:PAGE_NUMBER";
 export const EMERGENCY_EVACUATION =
   "/v2/en/passenger/emergency-evacuation-plan/";

@@ -7,6 +7,7 @@ import {
   GET_STATION_LINE,
   LEAST_DISTANCE,
   LINE_STATIONCARD_INFO,
+  LOST_FOUND_LIST,
   MINIMUM_INTERCHANGE,
   NOTICES,
   PENALTIES,
@@ -151,6 +152,18 @@ export class EmergencyEvacuationData {
   }
   async getEmergencyEvacution() {
     const result = await this.client.get(EMERGENCY_EVACUATION);
+    return result.data;
+  }
+}
+
+export class LostAndFoundData {
+  client: any;
+  constructor() {
+    this.client = apiClient;
+  }
+  async getLostAndFound(keyword: any) {
+    const url = LOST_FOUND_LIST.replace(":PAGE_NUMBER", keyword);
+    const result = await this.client.get(url);
     return result.data;
   }
 }

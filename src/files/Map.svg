@@ -1,0 +1,11 @@
+<svg viewBox="0 0 1000 1000" className="w-full h-full">
+  <line x1="100" y1="100" x2="400" y2="100" stroke="blue" strokeWidth="4" />
+  <circle cx="100" cy="100" r="10" fill="red" data-station="Station A" />
+  <circle cx="400" cy="100" r="10" fill="green" data-station="Station B" />
+  <text x="80" y="90" fontSize="14" fill="#fff">
+    Station A
+  </text>
+  <text x="380" y="90" fontSize="14" fill="#fff">
+    Station B
+  </text>
+</svg>;
