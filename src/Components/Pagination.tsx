@@ -6,7 +6,7 @@ interface DataType {
 
 interface Props {
   data?: DataType;
-  setPageNumber: (page: number) => Promise<void>; // Ensure the API call is async
+  setPageNumber: (page: number) => void; // Ensure the API call is async
 }
 
 const Pagination = ({ data, setPageNumber }: Props) => {
@@ -49,11 +49,11 @@ const Pagination = ({ data, setPageNumber }: Props) => {
   const endPage = Math.min(totalPages, startPage + maxPageButtons);
 
   return (
-    <div className="text-white flex flex-col items-center gap-4">
+    <div className="text-white flex flex-col items-center ">
       {/* Loading Indicator */}
       {loading && <div className="text-blue-500">Loading...</div>}
 
-      <div className="flex gap-2 items-center">
+      <div className="flex gap-2 items-center ">
         {/* Previous Button */}
         <button
           onClick={handlePrevious}
@@ -81,9 +81,6 @@ const Pagination = ({ data, setPageNumber }: Props) => {
             </button>
           );
         })}
-
-        {/* Ellipsis for Overflow */}
-        {endPage < totalPages && <span className="px-2">...</span>}
 
         {/* Next Button */}
         <button

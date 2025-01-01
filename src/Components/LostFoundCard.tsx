@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 interface CardType {
   id: number;
@@ -29,7 +30,7 @@ const LostFoundCard = ({ lostFoundCardData }: Props) => {
   return (
     <>
       <Navbar />
-      <div className="text-white w-full flex flex-col justify-evenly gap-6 p-6">
+      <div className="text-white w-full min-h-[800px] flex flex-col justify-evenly gap-6 p-6 mb-20">
         {lostFoundCardData.map((item, index) => (
           <div
             key={index}
@@ -61,6 +62,7 @@ const LostFoundCard = ({ lostFoundCardData }: Props) => {
           </div>
         ))}
       </div>
+      <Footer />
     </>
   );
 };
