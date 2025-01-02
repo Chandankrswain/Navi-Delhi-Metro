@@ -13,7 +13,6 @@ const Penalties = () => {
     const getPenalties = new PenaltiesData();
     const penaltiesResult = await getPenalties.getPenalties();
     setPenaltiesData(penaltiesResult);
-    console.log(penaltiesResult);
   };
 
   useEffect(() => {
