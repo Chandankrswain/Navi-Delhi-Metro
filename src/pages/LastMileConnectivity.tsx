@@ -8,8 +8,10 @@ const data = {
       links: [
         {
           text1: "Service Availability",
+          text2: "",
         },
         {
+          text1: "",
           text2: "Fare & Timings",
         },
       ],
@@ -20,8 +22,10 @@ const data = {
       links: [
         {
           text1: "Service Availability",
+          text2: "",
         },
         {
+          text1: "",
           text2: "Fare & Timings",
         },
       ],
@@ -32,8 +36,10 @@ const data = {
       links: [
         {
           text1: "Service Availability",
+          text2: "",
         },
         {
+          text1: "",
           text2: "Fare & Timings",
         },
       ],
@@ -44,8 +50,10 @@ const data = {
       links: [
         {
           text1: "Service Availability",
+          text2: "",
         },
         {
+          text1: "",
           text2: "Fare & Timings",
         },
       ],
