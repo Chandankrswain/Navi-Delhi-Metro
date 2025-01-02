@@ -18,3 +18,5 @@ export const PENALTIES = "/v2/en/passenger/penalties";
 export const LOST_FOUND_LIST = "/v2/en/lost_found_items/?page=:PAGE_NUMBER";
 export const EMERGENCY_EVACUATION =
   "/v2/en/passenger/emergency-evacuation-plan/";
+export const LAST_MILE = "v2/en/passenger/last-mile-connectivity/";
+export const LAST_MILE_SERVICE = "/v2/en/passenger/:PAGE_SLUG";

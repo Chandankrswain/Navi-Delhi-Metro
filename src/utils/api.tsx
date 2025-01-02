@@ -5,6 +5,8 @@ import {
   FARE,
   GET_LINE,
   GET_STATION_LINE,
+  LAST_MILE,
+  LAST_MILE_SERVICE,
   LEAST_DISTANCE,
   LINE_STATIONCARD_INFO,
   LOST_FOUND_LIST,
@@ -164,6 +166,23 @@ export class LostAndFoundData {
   async getLostAndFound(keyword: any) {
     const url = LOST_FOUND_LIST.replace(":PAGE_NUMBER", keyword);
     const result = await this.client.get(url);
+    return result.data;
+  }
+}
+export class LastMileData {
+  client: any;
+  constructor() {
+    this.client = apiClient;
+  }
+  async getLastMile() {
+    const result = await this.client.get(LAST_MILE);
+    return result.data;
+  }
+
+  async getLastSerMile(keyword: string) {
+    const result = await this.client.get(
+      LAST_MILE_SERVICE.replace(":PAGE_SLUG", keyword)
+    );
     return result.data;
   }
 }
