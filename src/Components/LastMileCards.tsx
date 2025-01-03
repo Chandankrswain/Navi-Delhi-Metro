@@ -27,6 +27,7 @@ const LastMileCards = ({ lastMileData }: Props) => {
     null
   );
   const [selectedService, setSelectedService] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false); // State for loading
 
   const fetchLastMileData = async (slug: string) => {
     const getLastMileData = new LastMileData();
@@ -35,6 +36,7 @@ const LastMileCards = ({ lastMileData }: Props) => {
   };
 
   const handleServiceClick = async (slug: string) => {
+    setIsLoading(true);
     if (selectedService === slug) {
       setSelectedService(null);
       setServiceAvailabilityData(null);
@@ -43,9 +45,11 @@ const LastMileCards = ({ lastMileData }: Props) => {
       const data = await fetchLastMileData(slug);
       setServiceAvailabilityData(data);
     }
+    setIsLoading(false);
   };
 
   const handleFareTimingClick = async (slug: string) => {
+    setIsLoading(true);
     if (selectedService === slug) {
       setSelectedService(null);
       setFareTimingData(null);
@@ -54,6 +58,7 @@ const LastMileCards = ({ lastMileData }: Props) => {
       const data = await fetchLastMileData(slug);
       setFareTimingData(data);
     }
+    setIsLoading(false);
   };
 
   return (
@@ -72,16 +77,22 @@ const LastMileCards = ({ lastMileData }: Props) => {
               {service.links.map((link, linkIndex) => (
                 <li key={linkIndex}>
                   <button
-                    className="cursor-pointer hover:text-blue-200 "
+                    className="cursor-pointer hover:text-blue-200"
                     onClick={() => handleServiceClick(service.slug || "")}
+                    disabled={isLoading}
                   >
-                    {link.text1}
+                    {isLoading && selectedService === service.slug
+                      ? "Loading..."
+                      : link.text1}
                   </button>
                   <button
                     onClick={() => handleFareTimingClick(service.slug2 || "")}
                     className="cursor-pointer hover:text-blue-200"
+                    disabled={isLoading}
                   >
-                    {link.text2}
+                    {isLoading && selectedService === service.slug2
+                      ? "Loading..."
+                      : link.text2}
                   </button>
                 </li>
               ))}
