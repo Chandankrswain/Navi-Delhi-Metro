@@ -1,20 +1,18 @@
 import { useState } from "react";
 import { LastMileData } from "../utils/api";
+import ServiceAvailabilityAndFareCard from "./ServiceAvailabilityAndFareCard";
 
 interface Service {
   title: string;
   slug?: string;
+  slug2?: string;
   links: { text1: string; text2: string }[];
 }
 
 interface ServiceData {
-  page_id: number;
   title: string;
   content: string;
   page_slug: string;
-  cover_photo: string | null;
-  seo_title: string | null;
-  search_description: string;
 }
 
 interface Props {
@@ -25,21 +23,36 @@ const LastMileCards = ({ lastMileData }: Props) => {
   const [serviceAvailabilityData, setServiceAvailabilityData] = useState<
     ServiceData[] | null
   >(null);
+  const [fareTimingData, setFareTimingData] = useState<ServiceData[] | null>(
+    null
+  );
   const [selectedService, setSelectedService] = useState<string | null>(null);
 
-  const FetchLastMileData = async (slug: string) => {
+  const fetchLastMileData = async (slug: string) => {
     const getLastMileData = new LastMileData();
     const lastMileResult = await getLastMileData.getLastSerMile(slug);
-    setServiceAvailabilityData(lastMileResult);
+    return lastMileResult;
   };
 
-  const handleServiceClick = (slug: string) => {
+  const handleServiceClick = async (slug: string) => {
     if (selectedService === slug) {
       setSelectedService(null);
       setServiceAvailabilityData(null);
     } else {
       setSelectedService(slug);
-      FetchLastMileData(slug);
+      const data = await fetchLastMileData(slug);
+      setServiceAvailabilityData(data);
+    }
+  };
+
+  const handleFareTimingClick = async (slug: string) => {
+    if (selectedService === slug) {
+      setSelectedService(null);
+      setFareTimingData(null);
+    } else {
+      setSelectedService(slug);
+      const data = await fetchLastMileData(slug);
+      setFareTimingData(data);
     }
   };
 
@@ -59,12 +72,15 @@ const LastMileCards = ({ lastMileData }: Props) => {
               {service.links.map((link, linkIndex) => (
                 <li key={linkIndex}>
                   <button
-                    className="cursor-pointer hover:text-blue-200"
+                    className="cursor-pointer hover:text-blue-200 "
                     onClick={() => handleServiceClick(service.slug || "")}
                   >
                     {link.text1}
                   </button>
-                  <button className="cursor-pointer hover:text-blue-200">
+                  <button
+                    onClick={() => handleFareTimingClick(service.slug2 || "")}
+                    className="cursor-pointer hover:text-blue-200"
+                  >
                     {link.text2}
                   </button>
                 </li>
@@ -72,16 +88,10 @@ const LastMileCards = ({ lastMileData }: Props) => {
             </ol>
 
             {selectedService === service.slug && serviceAvailabilityData && (
-              <div className="mt-4 p-4  shadow text-white bg-gray-700">
-                <h2 className="text-lg font-bold mb-2">Service Details:</h2>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html:
-                      serviceAvailabilityData[0]?.content ||
-                      "No content available",
-                  }}
-                />
-              </div>
+              <ServiceAvailabilityAndFareCard data={serviceAvailabilityData} />
+            )}
+            {selectedService === service.slug2 && fareTimingData && (
+              <ServiceAvailabilityAndFareCard data={fareTimingData} />
             )}
           </div>
         ))}
