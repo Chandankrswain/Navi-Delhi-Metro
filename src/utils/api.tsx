@@ -1,6 +1,7 @@
 import apiClient from "../services/axios";
 import {
   ALL_LINES,
+  CARBONLITE_METRO_TRAVEL,
   EMERGENCY_EVACUATION,
   FARE,
   GET_LINE,
@@ -183,6 +184,18 @@ export class LastMileData {
     const result = await this.client.get(
       LAST_MILE_SERVICE.replace(":PAGE_SLUG", keyword)
     );
+    return result.data;
+  }
+}
+
+export class CarbonLiteData {
+  client: any;
+  constructor() {
+    this.client = apiClient;
+  }
+
+  async getCarbonLiteMetro() {
+    const result = await this.client.get(CARBONLITE_METRO_TRAVEL);
     return result.data;
   }
 }

@@ -20,3 +20,5 @@ export const EMERGENCY_EVACUATION =
   "/v2/en/passenger/emergency-evacuation-plan/";
 export const LAST_MILE = "v2/en/passenger/last-mile-connectivity/";
 export const LAST_MILE_SERVICE = "/v2/en/passenger/:PAGE_SLUG";
+export const CARBONLITE_METRO_TRAVEL =
+  "/v2/en/passenger/carbonlite-metro-travel/";

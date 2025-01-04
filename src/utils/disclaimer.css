@@ -1,0 +1,5 @@
+.disclaimer-content * {
+    background: transparent !important; /* Remove any background */
+    color: white !important;   
+    border:none !important        /* Ensure text is visible on all backgrounds */
+  }
