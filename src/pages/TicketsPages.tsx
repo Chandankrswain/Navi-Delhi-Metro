@@ -13,10 +13,9 @@ interface TicketsData {
 const TicketsPages = () => {
   const [ticketsCardData, setTicketsCardData] = useState<TicketsData[] | null>(
     null
-  ); // Initially set to null to handle loading state properly
+  );
   const { pageSlug } = useParams<{ pageSlug: string }>();
 
-  // Fetch data based on the pageSlug
   const fetchTicketCardData = async (slug: string) => {
     const ticketData = new TicketsCardData();
     const ticketCardResult = await ticketData.getTicketsCardData(slug);
@@ -29,7 +28,6 @@ const TicketsPages = () => {
     }
   }, [pageSlug]);
 
-  // Check if ticketsCardData is available before rendering
   return (
     <>
       <Navbar />
