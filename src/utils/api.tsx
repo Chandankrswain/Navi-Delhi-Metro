@@ -16,6 +16,7 @@ import {
   PENALTIES,
   SEARCH_STATIONS,
   STATION_INFO,
+  TICKETS,
   TOURISM,
 } from "../services/constants/apiEndPoints";
 import { getISTTime } from "./helper";
@@ -196,6 +197,20 @@ export class CarbonLiteData {
 
   async getCarbonLiteMetro() {
     const result = await this.client.get(CARBONLITE_METRO_TRAVEL);
+    return result.data;
+  }
+}
+
+export class TicketsCardData {
+  client: any;
+  constructor() {
+    this.client = apiClient;
+  }
+
+  async getTicketsCardData(keyword: string) {
+    const result = await this.client.get(
+      TICKETS.replace(":PAGE_SLUG", keyword)
+    );
     return result.data;
   }
 }

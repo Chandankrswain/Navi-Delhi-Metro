@@ -3,3 +3,7 @@
     color: white !important;   
     border:none !important        /* Ensure text is visible on all backgrounds */
   }
+
+.ticket-content img{
+  display:none !important;
+}

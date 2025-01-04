@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { CarbonLiteData } from "../utils/api";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
-import "../utils/disclaimer.css";
+import "../utils/content.css";
 interface CarbonLiteMetroType {
   title: string;
   content: string;

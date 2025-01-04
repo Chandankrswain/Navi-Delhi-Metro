@@ -14,6 +14,7 @@ import LostFound from "./pages/LostFound";
 import Penalties from "./pages/Penalties";
 import EmergencyEvacuation from "./pages/EmergencyEvacuation";
 import ListofLostandFoundItems from "./pages/ListofLostandFoundItems";
+import TicketsPages from "./pages/TicketsPages";
 
 const App = () => {
   return (
@@ -46,6 +47,7 @@ const App = () => {
             path="/listoflostfounditems"
             element={<ListofLostandFoundItems />}
           />
+          <Route path="/:pageSlug" element={<TicketsPages />} />
         </Routes>
       </Router>
     </>
