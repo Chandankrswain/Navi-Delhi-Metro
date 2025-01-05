@@ -1,9 +1,12 @@
 .disclaimer-content * {
-    background: transparent !important; /* Remove any background */
-    color: white !important;   
-    border:none !important        /* Ensure text is visible on all backgrounds */
-  }
+  background: transparent !important; /* Remove any background */
+  color: white !important;
+  border: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important ;
+}
 
-.ticket-content img{
-  display:none !important;
+.ticket-content img {
+  display: none !important;
 }

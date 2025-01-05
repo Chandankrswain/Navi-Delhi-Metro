@@ -5,7 +5,6 @@ import { StationRoutes } from "./pages/StationRoutes";
 import StationInfo from "./pages/StationInfo";
 import LineInfo from "./pages/LineInfo";
 import TourGuide from "./pages/TourGuide";
-
 import TravelAdvisory from "./pages/TravelAdvisory";
 import Tickets from "./pages/Tickets";
 import LastMileConnectivity from "./pages/LastMileConnectivity";
@@ -13,8 +12,8 @@ import CarbonLiteMetro from "./pages/CarbonLiteMetro";
 import LostFound from "./pages/LostFound";
 import Penalties from "./pages/Penalties";
 import EmergencyEvacuation from "./pages/EmergencyEvacuation";
-import ListofLostandFoundItems from "./pages/ListofLostandFoundItems";
-import TicketsPages from "./pages/TicketsPages";
+import ListofLostandFoundItems from "./pages/ListofLostandFoundItems";  
+import MultipleInnerHtmlPages from "./pages/MultipleInnerHtmlPages";
 
 const App = () => {
   return (
@@ -47,7 +46,7 @@ const App = () => {
             path="/listoflostfounditems"
             element={<ListofLostandFoundItems />}
           />
-          <Route path="/:pageSlug" element={<TicketsPages />} />
+          <Route path="/:pageSlug" element={<MultipleInnerHtmlPages />} />
         </Routes>
       </Router>
     </>

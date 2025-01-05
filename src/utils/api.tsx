@@ -215,6 +215,7 @@ export class TicketsCardData {
     return result.data;
   }
 }
+
 export class ContactData {
   client: any;
   constructor() {

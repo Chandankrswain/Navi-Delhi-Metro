@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { TicketsCardData } from "../utils/api"; // Ensure this is the correct import for your data fetching function.
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import "../utils/miscellaneous.css";
 
 interface TicketsData {
   title: string;
@@ -15,12 +16,17 @@ const TicketsPages = () => {
     null
   );
   const { pageSlug } = useParams<{ pageSlug: string }>();
+  const location = useLocation();
 
   const fetchTicketCardData = async (slug: string) => {
     const ticketData = new TicketsCardData();
     const ticketCardResult = await ticketData.getTicketsCardData(slug);
     setTicketsCardData(ticketCardResult);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   useEffect(() => {
     if (pageSlug) {
