@@ -2,6 +2,7 @@ import apiClient from "../services/axios";
 import {
   ALL_LINES,
   CARBONLITE_METRO_TRAVEL,
+  CONTACT,
   EMERGENCY_EVACUATION,
   FARE,
   GET_LINE,
@@ -211,6 +212,17 @@ export class TicketsCardData {
     const result = await this.client.get(
       TICKETS.replace(":PAGE_SLUG", keyword)
     );
+    return result.data;
+  }
+}
+export class ContactData {
+  client: any;
+  constructor() {
+    this.client = apiClient;
+  }
+
+  async getContactData() {
+    const result = await this.client.get(CONTACT);
     return result.data;
   }
 }

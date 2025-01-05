@@ -23,3 +23,4 @@ export const LAST_MILE_SERVICE = "/v2/en/passenger/:PAGE_SLUG";
 export const CARBONLITE_METRO_TRAVEL =
   "/v2/en/passenger/carbonlite-metro-travel/";
 export const TICKETS = "v2/en/passenger/:PAGE_SLUG";
+export const CONTACT = "/v2/en/passenger/contact-us/";
