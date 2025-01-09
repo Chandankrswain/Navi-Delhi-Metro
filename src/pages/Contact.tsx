@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { ContactData } from "../utils/api";
 import { useLocation } from "react-router-dom";
 
-
 interface DataType {
   title: string;
   content: string;
@@ -40,7 +39,7 @@ const Contact = () => {
           {contactData?.map((item: DataType, index: number) => (
             <div
               key={index}
-              className="mb-8 p-6 shadow-md border 0 flex flex-col justify-center items-center w-full leading-loose"
+              className="mb-8 p-6 shadow-md sm:border 0 flex flex-col justify-center items-center w-full leading-loose"
             >
               <div
                 className="text-2xl font-semibold text-white mb-4 text-center"

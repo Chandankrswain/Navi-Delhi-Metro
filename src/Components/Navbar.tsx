@@ -86,12 +86,6 @@ const Navbar = () => {
           >
             Contact
           </li>
-          <li className="cursor-pointer px-4 py-2 hover:bg-gray-700">
-            About Us
-          </li>
-          <li className="cursor-pointer px-4 py-2 hover:bg-gray-700">
-            Services
-          </li>
         </ul>
       </div>
     </div>
