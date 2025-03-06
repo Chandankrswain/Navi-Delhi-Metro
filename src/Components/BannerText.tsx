@@ -1,8 +1,6 @@
 import { HiOutlineGlobeAlt } from "react-icons/hi2";
-import { useNavigate } from "react-router-dom";
 
 const BannerText = () => {
-  const navigate = useNavigate();
   return (
     <div className="relative bg-transparent flex-col justify-center items-center justify-evenly max-w-full m-3 mb-9">
       <div>
